@@ -1,25 +1,54 @@
 package com.example.administrateur.charadacrack;
 
+import android.content.res.AssetManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
 
 
 public class GameActivity extends ActionBarActivity {
+    public List<Charade> listeCharades = new ArrayList<Charade>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        LoadGame();
+        try{
+            InputStream charades = getAssets().open("Charades.txt");
+            InputStreamReader streamReader = new InputStreamReader(charades,"UTF-8");
+            BufferedReader bufferedReader = new BufferedReader(streamReader);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                Log.d("ligneé:",line);
+                String[] tableauCharades = line.split(Pattern.quote("|"));
+                Charade charade = new Charade(tableauCharades[0],tableauCharades[1],tableauCharades[2]);
+                listeCharades.add(charade);
+            }
+            charades.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        String[] firstCharadeArray = listeCharades.get(0).getCharadeText().split(Pattern.quote("$"));
+        String firstCharadeText = "";
+        for(int i=0; i<firstCharadeArray.length;i++){
+            firstCharadeText += firstCharadeArray[i];
+            firstCharadeText += "\n\n";
+        }
+        ((TextView)findViewById(R.id.Charades)).setText(firstCharadeText);
     }
 
 
@@ -46,15 +75,7 @@ public class GameActivity extends ActionBarActivity {
     }
 
     public void LoadGame(){
-        RequeteBDCharadaCrack requetecharadacrack = new RequeteBDCharadaCrack(this);
-        requetecharadacrack.open();
 
-        //Toast.makeText(this,"sssssssss",Toast.LENGTH_LONG).show();
-        //Charade charade = new Charade("BLablbablal","nicolas");
-
-        //requetecharadacrack.open();
-
-        //requetecharadacrack.insertCharade(charade);
 
     }
 }

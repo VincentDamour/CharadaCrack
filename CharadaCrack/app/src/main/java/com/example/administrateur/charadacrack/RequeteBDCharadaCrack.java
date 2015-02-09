@@ -7,8 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 public class RequeteBDCharadaCrack {
-    private static final int VERSION_BDD = 1;
-    private static final String NOM_BDD = "CharadaCrack.db";
     private static final String TABLE_CHARADE = "table_charade";
     private static final String COL_ID = "id";
     private static final int NUM_COL_ID = 0;
@@ -21,7 +19,7 @@ public class RequeteBDCharadaCrack {
     private DataBaseCharadaCrack DataBaseCharadaCrack;
 
     public RequeteBDCharadaCrack(Context context){
-        DataBaseCharadaCrack = new DataBaseCharadaCrack(context, NOM_BDD, null, VERSION_BDD);
+        DataBaseCharadaCrack = new DataBaseCharadaCrack(context);
     }
 
     public void open(){
@@ -55,6 +53,17 @@ public class RequeteBDCharadaCrack {
 
     public int removeCharadeWithID(int id){
         return bdd.delete(TABLE_CHARADE, COL_ID + " = " +id, null);
+    }
+
+    public Charade getCharadeWithID(int ID){
+        Cursor c = bdd.query(TABLE_CHARADE, new String[]{COL_ID,COL_CHARADETEXT,COL_REPONSE},COL_ID + "LIKE \""+ ID + "\"", null , null, null, null);
+        c.moveToFirst();
+        Charade charade = new Charade();
+        charade.setId(c.getString(NUM_COL_ID));
+        charade.setCharadeText(c.getString(NUM_COL_CHARADETEXT));
+        charade.setReponse(c.getString(NUM_COL_REPONSE));
+        c.close();
+        return charade;
     }
 
 }

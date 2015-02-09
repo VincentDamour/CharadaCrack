@@ -12,18 +12,21 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class DataBaseCharadaCrack extends SQLiteOpenHelper{
+    private static final int VERSION_BDD = 1;
+    private static final String NOM_BDD = "CharadaCrack.db";
     private static final String TABLE_CHARADE = "table_charade";
     private static final String COL_ID = "id";
     private static final String COL_CHARADETEXT = "charade_text";
     private static final String COL_REPONSE = "reponse";
+
 
     private static final String CREATE_BDD = "CREATE TABLE " + TABLE_CHARADE + " ("
             + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_CHARADETEXT + " TEXT NOT NULL, "
             + COL_REPONSE + " TEXT NOT NULL);";
     private Context charadeContext;
 
-    public DataBaseCharadaCrack(Context context, String name, CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public DataBaseCharadaCrack(Context context) {
+        super(context, NOM_BDD, null, VERSION_BDD);
         charadeContext = context;
         Log.d("debut1", "debut1");
     }

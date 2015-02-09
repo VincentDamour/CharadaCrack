@@ -1,0 +1,3 @@
+﻿1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|Saumon
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique|Piano
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.|Oursin 

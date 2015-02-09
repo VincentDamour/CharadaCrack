@@ -1,22 +1,22 @@
 package com.example.administrateur.charadacrack;
 
 public class Charade {
-    private int CharadeID;
+    private String CharadeID;
     private String CharadeText;
     private String Reponse;
 
     public Charade(){}
 
-    public Charade( String text, String rep){
-        //CharadeID = ID;
+    public Charade(String id, String text, String rep){
+        CharadeID = id;
         CharadeText = text;
         Reponse = rep;
     }
 
-    public int getId() {
+    public String getId() {
         return CharadeID;
     }
-    public void setId(int id) {
+    public void setId(String id) {
         this.CharadeID = id;
     }
 
