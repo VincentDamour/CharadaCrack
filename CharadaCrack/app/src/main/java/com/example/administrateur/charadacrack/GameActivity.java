@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -77,5 +79,11 @@ public class GameActivity extends ActionBarActivity {
     public void LoadGame(){
 
 
+    }
+
+    public void ButtonLettreClick(View view){
+        int buttonID = view.getId();
+        Button buttonClick = (Button)findViewById(buttonID);
+        Log.d("ss",buttonClick.getText()+"");
     }
 }
