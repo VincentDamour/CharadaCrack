@@ -101,9 +101,6 @@ public class GameActivity extends ActionBarActivity {
                     Toast.LENGTH_SHORT);
             toast.show();
         }
-        /*Toast toast = Toast.makeText(getApplicationContext(), "reponse:"+ReponseCharade+"  "+"Essaie:"+valideReponse ,
-                Toast.LENGTH_SHORT);
-        toast.show();*/
 
         textViewReponse.setText(valideReponse);
         buttonClick.setVisibility(View.INVISIBLE);
