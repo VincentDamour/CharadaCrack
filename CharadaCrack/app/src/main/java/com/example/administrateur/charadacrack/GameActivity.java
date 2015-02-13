@@ -84,6 +84,11 @@ public class GameActivity extends ActionBarActivity {
     public void ButtonLettreClick(View view){
         int buttonID = view.getId();
         Button buttonClick = (Button)findViewById(buttonID);
-        Log.d("ss",buttonClick.getText()+"");
+        CharSequence lettrePresse = buttonClick.getText();
+
+        TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
+        textViewReponse.append(lettrePresse);
+
+        buttonClick.setVisibility(View.INVISIBLE);
     }
 }
