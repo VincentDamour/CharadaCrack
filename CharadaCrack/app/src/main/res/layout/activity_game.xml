@@ -45,7 +45,7 @@
             android:paddingLeft="20dp"/>
 
         <TextView
-            android:layout_width="219dp"
+            android:layout_width="158dp"
             android:layout_height="76dp"
             android:id="@+id/txtviewReponse"
             android:layout_row="20"
@@ -53,12 +53,26 @@
             android:textColor="#ffffffff"
             android:textSize="18dp"
             android:paddingLeft="20dp"
-            android:layout_columnSpan="4" />
+            android:layout_columnSpan="3" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="X"
+            android:id="@+id/textView_SupprimerReponse"
+            android:layout_row="20"
+            android:layout_column="5"
+            android:textColor="#FFFF0000"
+            android:textSize="30dp"
+            android:paddingLeft="10dp"
+            android:onClick="SupprimerReponse"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"/>
 
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_1"
             android:layout_row="21"
             android:layout_column="0"
@@ -68,7 +82,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_3"
             android:layout_row="21"
             android:layout_column="1"
@@ -78,7 +92,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_5"
             android:layout_row="21"
             android:layout_column="2"
@@ -88,7 +102,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_7"
             android:layout_row="21"
             android:layout_column="3"
@@ -98,7 +112,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_9"
             android:layout_row="21"
             android:layout_column="4"
@@ -108,7 +122,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_11"
             android:layout_row="21"
             android:layout_column="5"
@@ -118,7 +132,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="b"
+            android:text="W"
             android:id="@+id/btnLettre_2"
             android:layout_row="22"
             android:layout_column="0"
@@ -128,7 +142,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_4"
             android:layout_row="22"
             android:layout_column="1"
@@ -138,7 +152,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_6"
             android:layout_row="22"
             android:layout_column="2"
@@ -148,7 +162,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_8"
             android:layout_row="22"
             android:layout_column="3"
@@ -158,7 +172,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_10"
             android:layout_row="22"
             android:layout_column="4"
@@ -168,7 +182,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="W"
             android:id="@+id/btnLettre_12"
             android:layout_row="22"
             android:layout_column="5"
