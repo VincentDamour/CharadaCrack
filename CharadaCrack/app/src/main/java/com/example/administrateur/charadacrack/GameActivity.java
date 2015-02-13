@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,7 +24,9 @@ import java.util.regex.Pattern;
 
 public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
+    List<Integer> listeLettrePresse = new ArrayList<Integer>();
     public String ReponseCharade;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +92,7 @@ public class GameActivity extends ActionBarActivity {
         CharSequence essaie="";
         Button buttonClick = (Button)findViewById(buttonID);
         CharSequence lettrePresse = buttonClick.getText();
+        listeLettrePresse.add(buttonID);
 
         TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
         essaie=textViewReponse.getText();
@@ -104,5 +108,18 @@ public class GameActivity extends ActionBarActivity {
 
         textViewReponse.setText(valideReponse);
         buttonClick.setVisibility(View.INVISIBLE);
+    }
+
+    public void SupprimerReponse(View view)
+    {
+        TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
+        textViewReponse.setText("");
+
+        for(int i=0; i<listeLettrePresse.size();i++)
+        {
+            int currentButtonID = listeLettrePresse.get(i);
+            Button buttonToShow = (Button)findViewById(currentButtonID);
+            buttonToShow.setVisibility(View.VISIBLE);
+        }
     }
 }
