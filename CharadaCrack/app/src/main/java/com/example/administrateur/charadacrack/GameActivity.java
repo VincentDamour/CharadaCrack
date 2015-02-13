@@ -19,13 +19,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 
 public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
     List<Integer> listeLettrePresse = new ArrayList<Integer>();
-    public String ReponseCharade;
+    public int CharadeCourrante = 0;
 
 
     @Override
@@ -48,14 +49,14 @@ public class GameActivity extends ActionBarActivity {
         catch (IOException e) {
             e.printStackTrace();
         }
-        String[] firstCharadeArray = listeCharades.get(0).getCharadeText().split(Pattern.quote("$"));
-        ReponseCharade=listeCharades.get(0).getReponse();
+        String[] firstCharadeArray = listeCharades.get(CharadeCourrante).getCharadeText().split(Pattern.quote("$"));
         String firstCharadeText = "";
         for(int i=0; i<firstCharadeArray.length;i++){
             firstCharadeText += firstCharadeArray[i];
             firstCharadeText += "\n\n";
         }
         ((TextView)findViewById(R.id.Charades)).setText(firstCharadeText);
+        AfficheLettreHasard();
     }
 
 
@@ -99,7 +100,9 @@ public class GameActivity extends ActionBarActivity {
 
         valideReponse=essaie.toString()+lettrePresse.toString();
 
-        if(valideReponse.equals(ReponseCharade))
+        String reponseCourrante = listeCharades.get(CharadeCourrante).getReponse();
+
+        if(valideReponse.equals(reponseCourrante))
         {
             Toast toast = Toast.makeText(getApplicationContext(), "BRAVO!!!" ,
                     Toast.LENGTH_SHORT);
@@ -120,6 +123,54 @@ public class GameActivity extends ActionBarActivity {
             int currentButtonID = listeLettrePresse.get(i);
             Button buttonToShow = (Button)findViewById(currentButtonID);
             buttonToShow.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public List<Character> ObtenirTableauLettreHasard(){
+        char[] lettreAlphabet = {'A','B','C','D','E','E','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        String reponse = listeCharades.get(CharadeCourrante).getReponse();
+        char[] tableauLettresReponse =  reponse.toCharArray();
+        List<Character> listeLettresPourAfficher = new ArrayList<Character>();
+        Random rand = new Random();
+
+        for(char lettre : reponse.toCharArray()) {
+            listeLettresPourAfficher.add(lettre);
+        }
+
+        for(int i = listeLettresPourAfficher.size(); i < 12; i++)
+        {
+            char randomChar = lettreAlphabet[rand.nextInt(26)];
+            listeLettresPourAfficher.add(randomChar);
+        }
+
+        return listeLettresPourAfficher;
+    }
+
+    public void AfficheLettreHasard()
+    {
+        List<Character> listeLettresPourAfficher = ObtenirTableauLettreHasard();
+        List<Integer> buttonsLettres = new ArrayList<Integer>();
+        Random rand = new Random();
+
+        GridLayout buttonLayout = (GridLayout)findViewById(R.id.gridLayoutForLetterButton);
+        int i =0;
+        Object controlCourrant;
+
+        controlCourrant = buttonLayout.getChildAt(i);
+
+        while(controlCourrant != null)
+        {
+            if(controlCourrant instanceof Button)
+            {
+                int positionLettre = rand.nextInt(listeLettresPourAfficher.size());
+                char lettre = listeLettresPourAfficher.get(positionLettre);
+                listeLettresPourAfficher.remove(positionLettre);
+
+                ((Button) controlCourrant).setText(Character.toString(lettre));
+            }
+
+            i++;
+            controlCourrant = buttonLayout.getChildAt(i);
         }
     }
 }
