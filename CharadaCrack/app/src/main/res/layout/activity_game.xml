@@ -58,7 +58,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="s"
             android:id="@+id/btnLettre_1"
             android:layout_row="21"
             android:layout_column="0"
@@ -78,7 +78,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="u"
             android:id="@+id/btnLettre_5"
             android:layout_row="21"
             android:layout_column="2"
@@ -88,7 +88,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="m"
             android:id="@+id/btnLettre_7"
             android:layout_row="21"
             android:layout_column="3"
@@ -98,7 +98,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="o"
             android:id="@+id/btnLettre_9"
             android:layout_row="21"
             android:layout_column="4"
@@ -108,7 +108,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="a"
+            android:text="n"
             android:id="@+id/btnLettre_11"
             android:layout_row="21"
             android:layout_column="5"
