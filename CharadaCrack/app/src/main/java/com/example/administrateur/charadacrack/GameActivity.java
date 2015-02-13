@@ -23,6 +23,7 @@ import java.util.regex.Pattern;
 
 public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
+    public String ReponseCharade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class GameActivity extends ActionBarActivity {
             e.printStackTrace();
         }
         String[] firstCharadeArray = listeCharades.get(0).getCharadeText().split(Pattern.quote("$"));
+        ReponseCharade=listeCharades.get(0).getReponse();
         String firstCharadeText = "";
         for(int i=0; i<firstCharadeArray.length;i++){
             firstCharadeText += firstCharadeArray[i];
@@ -83,12 +85,24 @@ public class GameActivity extends ActionBarActivity {
 
     public void ButtonLettreClick(View view){
         int buttonID = view.getId();
+        String valideReponse="";
+        CharSequence essaie="";
         Button buttonClick = (Button)findViewById(buttonID);
         CharSequence lettrePresse = buttonClick.getText();
 
         TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
-        textViewReponse.append(lettrePresse);
+        essaie=textViewReponse.getText();
 
+        valideReponse=essaie.toString()+lettrePresse.toString();
+
+        if(valideReponse.equals(ReponseCharade))
+        {
+            Toast toast = Toast.makeText(getApplicationContext(), "BRAVO!!!" ,
+                    Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
+        textViewReponse.setText(valideReponse);
         buttonClick.setVisibility(View.INVISIBLE);
     }
 }
