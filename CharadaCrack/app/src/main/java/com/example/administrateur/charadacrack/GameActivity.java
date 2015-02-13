@@ -1,5 +1,7 @@
 package com.example.administrateur.charadacrack;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
@@ -26,6 +28,7 @@ public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
     List<Integer> listeLettrePresse = new ArrayList<Integer>();
     public String ReponseCharade;
+    public int numeroCharade=0;
 
 
     @Override
@@ -48,8 +51,8 @@ public class GameActivity extends ActionBarActivity {
         catch (IOException e) {
             e.printStackTrace();
         }
-        String[] firstCharadeArray = listeCharades.get(0).getCharadeText().split(Pattern.quote("$"));
-        ReponseCharade=listeCharades.get(0).getReponse();
+        String[] firstCharadeArray = listeCharades.get(numeroCharade).getCharadeText().split(Pattern.quote("$"));
+        ReponseCharade=listeCharades.get(numeroCharade).getReponse();
         String firstCharadeText = "";
         for(int i=0; i<firstCharadeArray.length;i++){
             firstCharadeText += firstCharadeArray[i];
@@ -86,6 +89,19 @@ public class GameActivity extends ActionBarActivity {
 
     }
 
+    public void NextCharades()
+    {
+        numeroCharade++;
+        String[] CharadeArray = listeCharades.get(numeroCharade).getCharadeText().split(Pattern.quote("$"));
+        ReponseCharade=listeCharades.get(numeroCharade).getReponse();
+        String CharadeText = "";
+        for(int i=0; i<CharadeArray.length;i++){
+            CharadeText += CharadeArray[i];
+            CharadeText += "\n\n";
+        }
+        ((TextView)findViewById(R.id.Charades)).setText(CharadeText);
+    }
+
     public void ButtonLettreClick(View view){
         int buttonID = view.getId();
         String valideReponse="";
@@ -101,13 +117,23 @@ public class GameActivity extends ActionBarActivity {
 
         if(valideReponse.equals(ReponseCharade))
         {
-            Toast toast = Toast.makeText(getApplicationContext(), "BRAVO!!!" ,
-                    Toast.LENGTH_SHORT);
-            toast.show();
+            textViewReponse.setText("");
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder
+                    .setMessage("Bravo!!!")
+                    .setIcon(android.R.drawable.alert_dark_frame)
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            NextCharades();
+                        }
+                    })
+                    .show();
         }
-
-        textViewReponse.setText(valideReponse);
-        buttonClick.setVisibility(View.INVISIBLE);
+        else
+        {
+            textViewReponse.setText(valideReponse);
+            buttonClick.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void SupprimerReponse(View view)
