@@ -21,14 +21,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 
 public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
     List<Integer> listeLettrePresse = new ArrayList<Integer>();
-    public String ReponseCharade;
-    public int numeroCharade=0;
+    public int numeroCharadeCourrante = 0;
 
 
     @Override
@@ -41,7 +41,6 @@ public class GameActivity extends ActionBarActivity {
             BufferedReader bufferedReader = new BufferedReader(streamReader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                Log.d("ligneé:",line);
                 String[] tableauCharades = line.split(Pattern.quote("|"));
                 Charade charade = new Charade(tableauCharades[0],tableauCharades[1],tableauCharades[2]);
                 listeCharades.add(charade);
@@ -51,14 +50,14 @@ public class GameActivity extends ActionBarActivity {
         catch (IOException e) {
             e.printStackTrace();
         }
-        String[] firstCharadeArray = listeCharades.get(numeroCharade).getCharadeText().split(Pattern.quote("$"));
-        ReponseCharade=listeCharades.get(numeroCharade).getReponse();
+        String[] firstCharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
         String firstCharadeText = "";
         for(int i=0; i<firstCharadeArray.length;i++){
             firstCharadeText += firstCharadeArray[i];
             firstCharadeText += "\n\n";
         }
         ((TextView)findViewById(R.id.Charades)).setText(firstCharadeText);
+        AfficheLettreHasard();
     }
 
 
@@ -91,15 +90,18 @@ public class GameActivity extends ActionBarActivity {
 
     public void NextCharades()
     {
-        numeroCharade++;
-        String[] CharadeArray = listeCharades.get(numeroCharade).getCharadeText().split(Pattern.quote("$"));
-        ReponseCharade=listeCharades.get(numeroCharade).getReponse();
+        TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
+        textViewReponse.setText("");
+
+        numeroCharadeCourrante++;
+        String[] CharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
         String CharadeText = "";
         for(int i=0; i<CharadeArray.length;i++){
             CharadeText += CharadeArray[i];
             CharadeText += "\n\n";
         }
         ((TextView)findViewById(R.id.Charades)).setText(CharadeText);
+        AfficheLettreHasard();
     }
 
     public void ButtonLettreClick(View view){
@@ -115,9 +117,12 @@ public class GameActivity extends ActionBarActivity {
 
         valideReponse=essaie.toString()+lettrePresse.toString();
 
-        if(valideReponse.equals(ReponseCharade))
+        String reponseCourrante = listeCharades.get(numeroCharadeCourrante).getReponse();
+        textViewReponse.setText(valideReponse);
+        buttonClick.setVisibility(View.INVISIBLE);
+
+        if(valideReponse.equals(reponseCourrante))
         {
-            textViewReponse.setText("");
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder
                     .setMessage("Bravo!!!")
@@ -129,11 +134,6 @@ public class GameActivity extends ActionBarActivity {
                     })
                     .show();
         }
-        else
-        {
-            textViewReponse.setText(valideReponse);
-            buttonClick.setVisibility(View.INVISIBLE);
-        }
     }
 
     public void SupprimerReponse(View view)
@@ -141,11 +141,60 @@ public class GameActivity extends ActionBarActivity {
         TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
         textViewReponse.setText("");
 
-        for(int i=0; i<listeLettrePresse.size();i++)
+        for(int i=0; i< listeLettrePresse.size(); i++)
         {
             int currentButtonID = listeLettrePresse.get(i);
             Button buttonToShow = (Button)findViewById(currentButtonID);
             buttonToShow.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public List<Character> ObtenirTableauLettreHasard(){
+        char[] lettreAlphabet = {'A','B','C','D','E','E','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        String reponse = listeCharades.get(numeroCharadeCourrante).getReponse();
+        char[] tableauLettresReponse =  reponse.toCharArray();
+        List<Character> listeLettresPourAfficher = new ArrayList<Character>();
+        Random rand = new Random();
+
+        for(char lettre : reponse.toCharArray()) {
+            listeLettresPourAfficher.add(lettre);
+        }
+
+        for(int i = listeLettresPourAfficher.size(); i < 12; i++)
+        {
+            char randomChar = lettreAlphabet[rand.nextInt(26)];
+            listeLettresPourAfficher.add(randomChar);
+        }
+
+        return listeLettresPourAfficher;
+    }
+
+    public void AfficheLettreHasard()
+    {
+        List<Character> listeLettresPourAfficher = ObtenirTableauLettreHasard();
+        List<Integer> buttonsLettres = new ArrayList<Integer>();
+        Random rand = new Random();
+
+        GridLayout buttonLayout = (GridLayout)findViewById(R.id.gridLayoutForLetterButton);
+        int i =0;
+        Object controlCourrant;
+
+        controlCourrant = buttonLayout.getChildAt(i);
+
+        while(controlCourrant != null)
+        {
+            if(controlCourrant instanceof Button)
+            {
+                int positionLettre = rand.nextInt(listeLettresPourAfficher.size());
+                char lettre = listeLettresPourAfficher.get(positionLettre);
+                listeLettresPourAfficher.remove(positionLettre);
+
+                ((Button) controlCourrant).setText(Character.toString(lettre));
+                ((Button) controlCourrant).setVisibility(View.VISIBLE);
+            }
+
+            i++;
+            controlCourrant = buttonLayout.getChildAt(i);
         }
     }
 }
