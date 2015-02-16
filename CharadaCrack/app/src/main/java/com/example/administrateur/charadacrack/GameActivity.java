@@ -2,6 +2,7 @@ package com.example.administrateur.charadacrack;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
@@ -90,18 +91,24 @@ public class GameActivity extends ActionBarActivity {
 
     public void NextCharades()
     {
-        TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
-        textViewReponse.setText("");
+        if(numeroCharadeCourrante < listeCharades.size() - 1)
+        {
+            TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
+            textViewReponse.setText("");
 
-        numeroCharadeCourrante++;
-        String[] CharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
-        String CharadeText = "";
-        for(int i=0; i<CharadeArray.length;i++){
-            CharadeText += CharadeArray[i];
-            CharadeText += "\n\n";
+            numeroCharadeCourrante++;
+            String[] CharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
+            String CharadeText = "";
+            for(int i=0; i<CharadeArray.length;i++){
+                CharadeText += CharadeArray[i];
+                CharadeText += "\n\n";
+            }
+            ((TextView)findViewById(R.id.Charades)).setText(CharadeText);
+            AfficheLettreHasard();
         }
-        ((TextView)findViewById(R.id.Charades)).setText(CharadeText);
-        AfficheLettreHasard();
+        else {
+            PartieFini();
+        }
     }
 
     public void ButtonLettreClick(View view){
@@ -121,13 +128,20 @@ public class GameActivity extends ActionBarActivity {
         textViewReponse.setText(valideReponse);
         buttonClick.setVisibility(View.INVISIBLE);
 
+        VerifieReponse(valideReponse);
+    }
+
+    private void VerifieReponse(String valideReponse)
+    {
+        String reponseCourrante = listeCharades.get(numeroCharadeCourrante).getReponse();
+
         if(valideReponse.equals(reponseCourrante))
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder
-                    .setMessage("Bravo!!!")
+                    .setMessage("Bravo!!! Vous avez trouvé la bonne réponse.")
                     .setIcon(android.R.drawable.alert_dark_frame)
-                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Continuer", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             NextCharades();
                         }
@@ -196,5 +210,25 @@ public class GameActivity extends ActionBarActivity {
             i++;
             controlCourrant = buttonLayout.getChildAt(i);
         }
+    }
+
+    private void PartieFini()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder
+                .setMessage("Félicitation!!! Vous avez terminé le jeu, vous avez trouvé la bonne réponse pour toutes les charades.")
+                .setIcon(android.R.drawable.alert_dark_frame)
+                .setPositiveButton("Retour à l'accueil", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        RetourAccueil();
+                    }
+                })
+                .show();
+    }
+
+    private void RetourAccueil()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
