@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
@@ -51,14 +52,7 @@ public class GameActivity extends ActionBarActivity {
         catch (IOException e) {
             e.printStackTrace();
         }
-        String[] firstCharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
-        String firstCharadeText = "";
-        for(int i=0; i<firstCharadeArray.length;i++){
-            firstCharadeText += firstCharadeArray[i];
-            firstCharadeText += "\n\n";
-        }
-        ((TextView)findViewById(R.id.Charades)).setText(firstCharadeText);
-        AfficheLettreHasard();
+        LoadGame();
     }
 
 
@@ -85,8 +79,17 @@ public class GameActivity extends ActionBarActivity {
     }
 
     public void LoadGame(){
+        long seed = System.nanoTime();
+        Collections.shuffle(listeCharades, new Random(seed));
 
-
+        String[] firstCharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
+        String firstCharadeText = "";
+        for(int i=0; i<firstCharadeArray.length;i++){
+            firstCharadeText += firstCharadeArray[i];
+            firstCharadeText += "\n\n";
+        }
+        ((TextView)findViewById(R.id.Charades)).setText(firstCharadeText);
+        AfficheLettreHasard();
     }
 
     public void NextCharades()
