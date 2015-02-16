@@ -1,5 +1,8 @@
 package com.example.administrateur.charadacrack;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
@@ -26,7 +29,7 @@ import java.util.regex.Pattern;
 public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
     List<Integer> listeLettrePresse = new ArrayList<Integer>();
-    public int CharadeCourrante = 0;
+    public int numeroCharadeCourrante = 0;
 
 
     @Override
@@ -39,7 +42,6 @@ public class GameActivity extends ActionBarActivity {
             BufferedReader bufferedReader = new BufferedReader(streamReader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                Log.d("ligneé:",line);
                 String[] tableauCharades = line.split(Pattern.quote("|"));
                 Charade charade = new Charade(tableauCharades[0],tableauCharades[1],tableauCharades[2]);
                 listeCharades.add(charade);
@@ -49,7 +51,7 @@ public class GameActivity extends ActionBarActivity {
         catch (IOException e) {
             e.printStackTrace();
         }
-        String[] firstCharadeArray = listeCharades.get(CharadeCourrante).getCharadeText().split(Pattern.quote("$"));
+        String[] firstCharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
         String firstCharadeText = "";
         for(int i=0; i<firstCharadeArray.length;i++){
             firstCharadeText += firstCharadeArray[i];
@@ -87,6 +89,28 @@ public class GameActivity extends ActionBarActivity {
 
     }
 
+    public void NextCharades()
+    {
+        if(numeroCharadeCourrante < listeCharades.size() - 1)
+        {
+            TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
+            textViewReponse.setText("");
+
+            numeroCharadeCourrante++;
+            String[] CharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
+            String CharadeText = "";
+            for(int i=0; i<CharadeArray.length;i++){
+                CharadeText += CharadeArray[i];
+                CharadeText += "\n\n";
+            }
+            ((TextView)findViewById(R.id.Charades)).setText(CharadeText);
+            AfficheLettreHasard();
+        }
+        else {
+            PartieFini();
+        }
+    }
+
     public void ButtonLettreClick(View view){
         int buttonID = view.getId();
         String valideReponse="";
@@ -100,17 +124,30 @@ public class GameActivity extends ActionBarActivity {
 
         valideReponse=essaie.toString()+lettrePresse.toString();
 
-        String reponseCourrante = listeCharades.get(CharadeCourrante).getReponse();
+        String reponseCourrante = listeCharades.get(numeroCharadeCourrante).getReponse();
+        textViewReponse.setText(valideReponse);
+        buttonClick.setVisibility(View.INVISIBLE);
+
+        VerifieReponse(valideReponse);
+    }
+
+    private void VerifieReponse(String valideReponse)
+    {
+        String reponseCourrante = listeCharades.get(numeroCharadeCourrante).getReponse();
 
         if(valideReponse.equals(reponseCourrante))
         {
-            Toast toast = Toast.makeText(getApplicationContext(), "BRAVO!!!" ,
-                    Toast.LENGTH_SHORT);
-            toast.show();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder
+                    .setMessage("Bravo!!! Vous avez trouvé la bonne réponse.")
+                    .setIcon(android.R.drawable.alert_dark_frame)
+                    .setPositiveButton("Continuer", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            NextCharades();
+                        }
+                    })
+                    .show();
         }
-
-        textViewReponse.setText(valideReponse);
-        buttonClick.setVisibility(View.INVISIBLE);
     }
 
     public void SupprimerReponse(View view)
@@ -118,7 +155,7 @@ public class GameActivity extends ActionBarActivity {
         TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
         textViewReponse.setText("");
 
-        for(int i=0; i<listeLettrePresse.size();i++)
+        for(int i=0; i< listeLettrePresse.size(); i++)
         {
             int currentButtonID = listeLettrePresse.get(i);
             Button buttonToShow = (Button)findViewById(currentButtonID);
@@ -128,7 +165,7 @@ public class GameActivity extends ActionBarActivity {
 
     public List<Character> ObtenirTableauLettreHasard(){
         char[] lettreAlphabet = {'A','B','C','D','E','E','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
-        String reponse = listeCharades.get(CharadeCourrante).getReponse();
+        String reponse = listeCharades.get(numeroCharadeCourrante).getReponse();
         char[] tableauLettresReponse =  reponse.toCharArray();
         List<Character> listeLettresPourAfficher = new ArrayList<Character>();
         Random rand = new Random();
@@ -167,10 +204,31 @@ public class GameActivity extends ActionBarActivity {
                 listeLettresPourAfficher.remove(positionLettre);
 
                 ((Button) controlCourrant).setText(Character.toString(lettre));
+                ((Button) controlCourrant).setVisibility(View.VISIBLE);
             }
 
             i++;
             controlCourrant = buttonLayout.getChildAt(i);
         }
+    }
+
+    private void PartieFini()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder
+                .setMessage("Félicitation!!! Vous avez terminé le jeu, vous avez trouvé la bonne réponse pour toutes les charades.")
+                .setIcon(android.R.drawable.alert_dark_frame)
+                .setPositiveButton("Retour à l'accueil", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        RetourAccueil();
+                    }
+                })
+                .show();
+    }
+
+    private void RetourAccueil()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

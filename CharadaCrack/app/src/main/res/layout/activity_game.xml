@@ -19,10 +19,11 @@
         <TextView android:text="Charades" android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:layout_centerHorizontal="false"
             android:editable="false"
             android:id="@+id/Charades"
-            android:textColor="#ffffffff" />
+            android:textColor="#ffffffff"
+            android:paddingLeft="5dp"/>
 
         </RelativeLayout>
 
@@ -42,7 +43,7 @@
             android:layout_columnSpan="2"
             android:textColor="#ffffffff"
             android:textSize="18dp"
-            android:paddingLeft="20dp"/>
+            android:paddingLeft="5dp"/>
 
         <TextView
             android:layout_width="158dp"
@@ -142,7 +143,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="A"
+            android:text="P"
             android:id="@+id/btnLettre_4"
             android:layout_row="22"
             android:layout_column="1"
@@ -152,7 +153,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="A"
+            android:text="I"
             android:id="@+id/btnLettre_6"
             android:layout_row="22"
             android:layout_column="2"
@@ -172,7 +173,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="A"
+            android:text="N"
             android:id="@+id/btnLettre_10"
             android:layout_row="22"
             android:layout_column="4"
@@ -182,7 +183,7 @@
         <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:text="A"
+            android:text="R"
             android:id="@+id/btnLettre_12"
             android:layout_row="22"
             android:layout_column="5"
