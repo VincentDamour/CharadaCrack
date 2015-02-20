@@ -50,7 +50,7 @@ public class GameActivity extends ActionBarActivity {
             charades.close();
         }
         catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace() ;
         }
         LoadGame();
     }
@@ -200,7 +200,7 @@ public class GameActivity extends ActionBarActivity {
 
         while(controlCourrant != null)
         {
-            if(controlCourrant instanceof Button)
+            if(controlCourrant instanceof Button && ((Button) controlCourrant).getId() != R.id.btn_delete)
             {
                 int positionLettre = rand.nextInt(listeLettresPourAfficher.size());
                 char lettre = listeLettresPourAfficher.get(positionLettre);
