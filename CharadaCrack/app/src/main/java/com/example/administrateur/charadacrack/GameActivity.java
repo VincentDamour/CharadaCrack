@@ -24,6 +24,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.regex.Pattern;
 
 
@@ -31,6 +33,7 @@ public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
     List<Integer> listeLettrePresse = new ArrayList<Integer>();
     public int numeroCharadeCourrante = 0;
+    Timer timer;
 
 
     @Override
@@ -88,8 +91,10 @@ public class GameActivity extends ActionBarActivity {
             firstCharadeText += firstCharadeArray[i];
             firstCharadeText += "\n\n";
         }
-        ((TextView)findViewById(R.id.Charades)).setText(firstCharadeText);
+        ((TextView)findViewById(R.id.txtview_charade)).setText(firstCharadeText);
         AfficheLettreHasard();
+        MAJInfoJoueur();
+        //startTimerJeux();
     }
 
     public void NextCharades()
@@ -106,8 +111,10 @@ public class GameActivity extends ActionBarActivity {
                 CharadeText += CharadeArray[i];
                 CharadeText += "\n\n";
             }
-            ((TextView)findViewById(R.id.Charades)).setText(CharadeText);
+            ((TextView)findViewById(R.id.txtview_charade)).setText(CharadeText);
             AfficheLettreHasard();
+            MAJInfoJoueur();
+            //startTimerJeux();
         }
         else {
             PartieFini();
@@ -234,4 +241,36 @@ public class GameActivity extends ActionBarActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    private void MAJInfoJoueur()
+    {
+        TextView txtviewNiveau = (TextView)findViewById(R.id.textView_niveau);
+        int niveauCourrant = numeroCharadeCourrante + 1;
+        int nombreNiveau = listeCharades.size();
+
+        txtviewNiveau.setText("Niveau: "+ niveauCourrant + "/" + nombreNiveau);
+    }
+
+   /* private void MAJTemps()
+    {
+        TextView txtviewTemps = (TextView)findViewById(R.id.textView_temps);
+        Toast.makeText(this,"salit",Toast.LENGTH_SHORT);
+    }*/
+
+   /* private void startTimerJeux()
+    {
+        final TextView txtviewTemps = (TextView)findViewById(R.id.textView_temps);
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //txtviewTemps.setText();
+                    }
+                });
+            }
+        }, 0, 2000);
+    }*/
 }
