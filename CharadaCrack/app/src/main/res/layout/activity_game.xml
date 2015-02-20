@@ -56,19 +56,18 @@
             android:paddingLeft="20dp"
             android:layout_columnSpan="3" />
 
-        <TextView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
             android:text="X"
-            android:id="@+id/textView_SupprimerReponse"
+            android:id="@+id/btn_delete"
             android:layout_row="20"
             android:layout_column="5"
-            android:textColor="#FFFF0000"
-            android:textSize="30dp"
-            android:paddingLeft="10dp"
-            android:onClick="SupprimerReponse"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"/>
+            android:textColor="#ffff0000"
+            android:textSize="26dp"
+
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="SupprimerReponse" />
 
         <Button
             android:layout_width="55dp"
