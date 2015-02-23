@@ -1,6 +1,7 @@
 package com.example.administrateur.charadacrack;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -24,6 +25,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.regex.Pattern;
 
 
@@ -31,6 +34,9 @@ public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
     List<Integer> listeLettrePresse = new ArrayList<Integer>();
     public int numeroCharadeCourrante = 0;
+    Timer timer;
+    int Minutes=2;
+    int Secondes=0;
 
 
     @Override
@@ -88,8 +94,10 @@ public class GameActivity extends ActionBarActivity {
             firstCharadeText += firstCharadeArray[i];
             firstCharadeText += "\n\n";
         }
-        ((TextView)findViewById(R.id.Charades)).setText(firstCharadeText);
+        ((TextView)findViewById(R.id.txtview_charade)).setText(firstCharadeText);
         AfficheLettreHasard();
+        MAJInfoJoueur();
+        startTimerJeux();
     }
 
     public void NextCharades()
@@ -106,8 +114,12 @@ public class GameActivity extends ActionBarActivity {
                 CharadeText += CharadeArray[i];
                 CharadeText += "\n\n";
             }
-            ((TextView)findViewById(R.id.Charades)).setText(CharadeText);
+            ((TextView)findViewById(R.id.txtview_charade)).setText(CharadeText);
             AfficheLettreHasard();
+            MAJInfoJoueur();
+            Minutes=2;
+            Secondes=0;
+            startTimerJeux();
         }
         else {
             PartieFini();
@@ -233,5 +245,57 @@ public class GameActivity extends ActionBarActivity {
     {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    private void MAJInfoJoueur()
+    {
+        TextView txtviewNiveau = (TextView)findViewById(R.id.textView_niveau);
+        int niveauCourrant = numeroCharadeCourrante + 1;
+        int nombreNiveau = listeCharades.size();
+
+        txtviewNiveau.setText("Niveau: "+ niveauCourrant + "/" + nombreNiveau);
+    }
+
+    private void startTimerJeux()
+    {
+        final TextView txtviewTemps = (TextView)findViewById(R.id.textView_temps);
+        final Context c=this;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                       if(Minutes>0 || Secondes>0)
+                       {
+                           if(Secondes==0)
+                           {
+                               Minutes--;
+                               Secondes=59;
+                           }
+                           else
+                           {
+                               Secondes--;
+                           }
+                           if(Secondes<10)
+                           {
+                               txtviewTemps.setText(Minutes+":0"+Secondes);
+                           }
+                           else
+                           {
+                               txtviewTemps.setText(Minutes + ":" + Secondes);
+                           }
+                       }
+                       else
+                       {
+                           timer.cancel();
+                           timer.purge();
+                           /***/
+                       }
+                    }
+                });
+            }
+        }, 2000, 100);
     }
 }
