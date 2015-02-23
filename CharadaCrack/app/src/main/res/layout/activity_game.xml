@@ -39,17 +39,13 @@
             android:paddingLeft="20dp"
             android:layout_columnSpan="3" />
 
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="wrap_content"
-            android:text="X"
-            android:id="@+id/btn_delete"
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="26dp"
+            android:id="@+id/btn_DeleteLetter"
             android:layout_row="20"
             android:layout_column="5"
-            android:textColor="#ffff0000"
-            android:textSize="26dp"
-
-            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/redarrow"
             android:onClick="SupprimerReponse" />
 
         <Button
@@ -204,7 +200,7 @@
         <TextView
             android:layout_width="138dp"
             android:layout_height="match_parent"
-            android:text="Points: 99999"
+            android:text="Points: 0"
             android:id="@+id/textView_points"
             android:layout_row="1"
             android:layout_column="1"
@@ -214,12 +210,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="9:99"
+            android:text="2:00"
             android:id="@+id/textView_temps"
             android:layout_row="1"
             android:layout_column="5"
             android:textColor="#ffffffff"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:onClick="TempFiniClick" />
     </GridLayout>
 
     <RelativeLayout
