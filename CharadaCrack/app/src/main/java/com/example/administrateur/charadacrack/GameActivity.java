@@ -1,6 +1,7 @@
 package com.example.administrateur.charadacrack;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -34,6 +35,8 @@ public class GameActivity extends ActionBarActivity {
     List<Integer> listeLettrePresse = new ArrayList<Integer>();
     public int numeroCharadeCourrante = 0;
     Timer timer;
+    int Minutes=2;
+    int Secondes=0;
 
 
     @Override
@@ -94,7 +97,7 @@ public class GameActivity extends ActionBarActivity {
         ((TextView)findViewById(R.id.txtview_charade)).setText(firstCharadeText);
         AfficheLettreHasard();
         MAJInfoJoueur();
-        //startTimerJeux();
+        startTimerJeux();
     }
 
     public void NextCharades()
@@ -114,7 +117,9 @@ public class GameActivity extends ActionBarActivity {
             ((TextView)findViewById(R.id.txtview_charade)).setText(CharadeText);
             AfficheLettreHasard();
             MAJInfoJoueur();
-            //startTimerJeux();
+            Minutes=2;
+            Secondes=0;
+            startTimerJeux();
         }
         else {
             PartieFini();
@@ -251,15 +256,10 @@ public class GameActivity extends ActionBarActivity {
         txtviewNiveau.setText("Niveau: "+ niveauCourrant + "/" + nombreNiveau);
     }
 
-   /* private void MAJTemps()
-    {
-        TextView txtviewTemps = (TextView)findViewById(R.id.textView_temps);
-        Toast.makeText(this,"salit",Toast.LENGTH_SHORT);
-    }*/
-
-   /* private void startTimerJeux()
+    private void startTimerJeux()
     {
         final TextView txtviewTemps = (TextView)findViewById(R.id.textView_temps);
+        final Context c=this;
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -267,10 +267,35 @@ public class GameActivity extends ActionBarActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        //txtviewTemps.setText();
+                       if(Minutes>0 || Secondes>0)
+                       {
+                           if(Secondes==0)
+                           {
+                               Minutes--;
+                               Secondes=59;
+                           }
+                           else
+                           {
+                               Secondes--;
+                           }
+                           if(Secondes<10)
+                           {
+                               txtviewTemps.setText(Minutes+":0"+Secondes);
+                           }
+                           else
+                           {
+                               txtviewTemps.setText(Minutes + ":" + Secondes);
+                           }
+                       }
+                       else
+                       {
+                           timer.cancel();
+                           timer.purge();
+                           /***/
+                       }
                     }
                 });
             }
-        }, 0, 2000);
-    }*/
+        }, 2000, 100);
+    }
 }
