@@ -115,7 +115,7 @@ public class GameActivity extends ActionBarActivity {
 
             textViewReponse.setText("");
             txtview_Temps.setText("2:00");
-
+            listeLettrePresse = new ArrayList<Integer>();
             numeroCharadeCourrante++;
             String[] CharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
             String CharadeText = "";
