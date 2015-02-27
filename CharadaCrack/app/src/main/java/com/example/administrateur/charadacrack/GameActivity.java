@@ -48,16 +48,31 @@ public class GameActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_game);
+        Intent intent=getIntent();
+
+        int nbcharadesmax = intent.getIntExtra(ChoixNiveau.EXTRA_MESSAGE,0);
+
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+        String text=nbcharadesmax+"";
+        Toast toast = Toast.makeText(context,text, duration);
+        toast.show();
+
 
         try{
             InputStream charades = getAssets().open("Charades.txt");
             InputStreamReader streamReader = new InputStreamReader(charades,"UTF-8");
             BufferedReader bufferedReader = new BufferedReader(streamReader);
             String line;
+            int nbcharades=0;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] tableauCharades = line.split(Pattern.quote("|"));
                 Charade charade = new Charade(tableauCharades[0],tableauCharades[1],tableauCharades[2]);
-                listeCharades.add(charade);
+                if(nbcharades<nbcharadesmax)
+                {
+                    listeCharades.add(charade);
+                    nbcharades++;
+                }
             }
             charades.close();
         }

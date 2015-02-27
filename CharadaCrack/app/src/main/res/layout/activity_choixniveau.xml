@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C3E50"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="0.53" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="10 charades"
+        android:id="@+id/btn_dixcharades"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickXCharades" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="25 charades"
+        android:id="@+id/btn_vingtcinqCharades"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickXCharades" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="50 charades"
+        android:id="@+id/btn_CinquanteCharades"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickXCharades" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="100 charades"
+        android:id="@+id/btn_CentCharades"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickXCharades" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Toutes les charades"
+        android:id="@+id/btn_JouerToutesLesCharades"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickXCharades" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Statistiques"
+        android:id="@+id/btn_Statistiques"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickStatistique" />
+
+</LinearLayout>

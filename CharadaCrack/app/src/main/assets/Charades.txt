@@ -8,3 +8,103 @@
 8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
 9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
 10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
+5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
+6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
+9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
+10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
