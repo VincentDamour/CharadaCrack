@@ -1,4 +1,4 @@
-﻿1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une petire montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+﻿1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une petite montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
 2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
 3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
 4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
