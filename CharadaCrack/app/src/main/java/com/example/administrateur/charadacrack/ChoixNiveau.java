@@ -55,15 +55,13 @@ public class ChoixNiveau extends ActionBarActivity {
 
         switch(btnpresse)
         {
-            case "10 charades":intent.putExtra(EXTRA_MESSAGE,10) ;
+            case "5 charades":intent.putExtra(EXTRA_MESSAGE,5) ;
+                break;
+            case "10 charades":intent.putExtra(EXTRA_MESSAGE,10);
                 break;
             case "25 charades":intent.putExtra(EXTRA_MESSAGE,25);
                 break;
             case "50 charades":intent.putExtra(EXTRA_MESSAGE,50);
-                break;
-            case "100 charades":intent.putExtra(EXTRA_MESSAGE,100);
-                break;
-            case "Toutes les charades": intent.putExtra(EXTRA_MESSAGE, 1000);
                 break;
             default: onClickStatistique(view);
         }

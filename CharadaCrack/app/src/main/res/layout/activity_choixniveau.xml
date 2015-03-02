@@ -22,8 +22,8 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="10 charades"
-        android:id="@+id/btn_dixcharades"
+        android:text="5 charades"
+        android:id="@+id/btn_cinqCharades"
         android:layout_gravity="center_horizontal"
         android:onClick="onClickXCharades"
         android:layout_marginTop="40dp"/>
@@ -31,8 +31,16 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:text="10 charades"
+        android:id="@+id/btn_dixCharades"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickXCharades" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:text="25 charades"
-        android:id="@+id/btn_vingtcinqCharades"
+        android:id="@+id/btn_vinqtcinqCharades"
         android:layout_gravity="center_horizontal"
         android:onClick="onClickXCharades" />
 
@@ -40,23 +48,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="50 charades"
-        android:id="@+id/btn_CinquanteCharades"
-        android:layout_gravity="center_horizontal"
-        android:onClick="onClickXCharades" />
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="100 charades"
-        android:id="@+id/btn_CentCharades"
-        android:layout_gravity="center_horizontal"
-        android:onClick="onClickXCharades" />
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Toutes les charades"
-        android:id="@+id/btn_JouerToutesLesCharades"
+        android:id="@+id/btn_cinquanteCharades"
         android:layout_gravity="center_horizontal"
         android:onClick="onClickXCharades" />
 
