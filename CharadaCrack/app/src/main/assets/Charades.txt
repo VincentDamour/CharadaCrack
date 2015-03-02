@@ -14,3 +14,5 @@
 13|Mon premier: est une partie du corps. $Mon deuxième: est une note de musique. $Mon troisième est l'abréviation de Nicolas. $Mon tout est un villageois. $Qui suis-je?|DOMINIC
 14|Mon premier: n'est pas froid. $Mon deuxième: est un demi coco. $Mon troisième: est synonyme d'ici. $Mon tout est excellent à pâques. $Qui suis-je?|CHOCOLAT
 15|Mon premier: a six faces. $Mon deuxième: est confortable la nuit. $Mon troisième: est ciel au pluriel. $Mon tout: veut dire très bon. $Qui suis-je?|DELICIEUX
+16|Mon premier: est une voiture pour les québécois et un tank pour les français. $Mon deuxième: est le contraire de mauvais. $Mon tout: alimente le barbecue. $Qui suis-je|CHARBON
+17|Mon premier: est un contenant à bean. $Mon deuxième: le cinéma en est le 7e. $Mon tout: est excellent en confit. $Qui suis-je?|CANARD
