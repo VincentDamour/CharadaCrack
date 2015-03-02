@@ -23,3 +23,31 @@
 23|Mon premier: se trouve de chaque côté de la bouche.$Mon deuxième: est une conjonction.$Mon tout: est adoré par les enfants. $Qui suis-je?|JOUET
 24|Mon premier: est stupide.$Mon deuxième: est un verbe à l'infinitif qui signifie la naissance.$Mon tout: est synonyme de savoir.$Qui suis-je|CONNAITRE
 25|Mon premier: est une salade chez St-Hubert.$Mon deuxième: n'est pas haut.$Mon troisième: est la 8e consonne de l'alphabet.$Mon tout: est très présent dans le jeu à Éric.$Qui suis-je?|CHUBAKA
+
+26|Mon premier: est l'abréviation de résidence.$Mon deuxième: est un liquide vital.$Mon tout: est une branche de l'informatique $Qui suis-je?|RESEAU
+27|Mon premier: est un métal précieux.$Mon deuxième: est le verbe diner à l'imparfait.$Mon troisième: est un menteur sans men .$Mon tout: peut être exploité par une pomme, une fenêtre ou un pengouin.$Qui suis-je?|ORDINATEUR
+28|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|PYRAMIDE
+29|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|SOULIER
+30|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|PANTALON
+
+31|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|YVAN
+32|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|SOURIS
+33|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|AUTONOME
+34|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|CHARADE
+35|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|MANTEAU
+36|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|LUNETTE
+37|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|EPICERIE
+38|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|VIANDE
+39|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|QUEBEC
+40|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|BEAUCE
+
+41|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|AUTOROUTE
+42|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|ROULADE
+43|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|CRAYON
+44|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|EFFACE
+45|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|CHAMPIGNON
+46|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|ROUTEUR
+47|Mon premier:10 $Mon deuxième: QUÊTE$Mon tout: $Qui suis-je?|DISQUETTE
+48|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|FARCE
+49|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|
+50|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|
