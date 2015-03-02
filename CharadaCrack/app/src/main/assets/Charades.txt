@@ -26,7 +26,7 @@
 
 26|Mon premier: est l'abréviation de résidence.$Mon deuxième: est un liquide vital.$Mon tout: est une branche de l'informatique $Qui suis-je?|RESEAU
 27|Mon premier: est un métal précieux.$Mon deuxième: est le verbe diner à l'imparfait.$Mon troisième: est un menteur sans men .$Mon tout: peut être exploité par une pomme, une fenêtre ou un pengouin.$Qui suis-je?|ORDINATEUR
-28|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|PYRAMIDE
+28|Mon premier: est 3.14159265359.$Mon deuxième: est un animal qui vit dans les égouts.$Mon troisième: est une note de musique.$Mon dernier: est le seul nombre premier pair.$Mon tout: est un bâtiment du désert.$Qui suis-je?|PYRAMIDE
 29|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|SOULIER
 30|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|PANTALON
 
