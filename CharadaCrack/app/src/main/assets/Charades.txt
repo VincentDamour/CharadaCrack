@@ -11,3 +11,5 @@
 
 11|Mon premier: est un oiseau qui fait la roue. $Mon deuxième: est synonyme de plate. $Mon troisième: n'est pas vrai. $Mon tout est un français qui n'aime pas le fromage et un italien qui n'aime pas les pâtes. $Qui suis-je?|PANDOLFO
 12|Mon premier: est un alcool qui peut être rouge ou blanc. $Mon deuxième: est le résultat d'une coupure. $Mon tout: est un hacker. $Qui suis-je?|VINCENT
+13|Mon premier: est une partie du corps. $Mon deuxième: est une note de musique. $Mon troisième est l'abréviation de Nicolas. $Mon tout est un villageois. $Qui suis-je?|DOMINIC
+14|
