@@ -1,4 +1,4 @@
-﻿1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+﻿1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une petite montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
 2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
 3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
 4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
@@ -8,3 +8,18 @@
 8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
 9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
 10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+11|Mon premier: est un oiseau qui fait la roue.$Mon deuxième: est synonyme de plate.$Mon troisième: n'est pas vrai.$Mon tout est un français qui n'aime pas le fromage et un italien qui n'aime pas les pâtes.$Qui suis-je?|PANDOLFO
+12|Mon premier: est un alcool qui peut être rouge ou blanc.$Mon deuxième: est le résultat d'une coupure.$Mon tout: est un hacker.$Qui suis-je?|VINCENT
+13|Mon premier: est une partie du corps.$Mon deuxième: est une note de musique.$Mon troisième est l'abréviation de Nicolas.$Mon tout est un villageois.$Qui suis-je?|DOMINIC
+14|Mon premier: n'est pas froid.$Mon deuxième: est un demi coco.$Mon troisième: est synonyme d'ici. $Mon tout est excellent à Pâques.$Qui suis-je?|CHOCOLAT
+15|Mon premier: a six faces.$Mon deuxième: est confortable la nuit.$Mon troisième: est ciel au pluriel.$Mon tout: veut dire très bon.$Qui suis-je?|DELICIEUX
+16|Mon premier: est une voiture pour les québécois et un tank pour les français. $Mon deuxième: est le contraire de mauvais. $Mon tout: alimente le barbecue. $Qui suis-je|CHARBON
+17|Mon premier: est un contenant à bean.$Mon deuxième: le cinéma en est le 7e. $Mon tout: est excellent en confit.$Qui suis-je?|CANARD
+18|Mon premier: est un animal populaire sur youtube.$Mon deuxième: est un produit des vaches.$Mon tout: est populaire autour des lacs.$Qui suis-je?|CHALET
+19|Mon premier: n'est pas beau.$Mon deuxième: est la case départ au monopoly.$Mon tout: est un jeu de construction.$Qui suis-je?|LEGO
+20|Mon premier: est une condition.$Mon deuxième: est une arme longue avec un pique au bout.$Mon tout: ne fait pas de bruit.$Qui suis-je?|SILENCE
+21|Mon premier: est ce qu'on écrit.$Mon deuxième: est au milieu du visage.$Mon tout: traîne dans le fond des poches.$Qui suis-je?|MONNAIE
+22|Mon premier: est le nom de notre ancienne copine.$Mon deuxième: vient à la fin d'une prière.$Mon tout: en stress plus d'un. $Qui suis-je?|EXAMEN
+23|Mon premier: se trouve de chaque côté de la bouche.$Mon deuxième: est une conjonction.$Mon tout: est adoré par les enfants. $Qui suis-je?|JOUET
+24|Mon premier: est stupide.$Mon deuxième: est un verbe à l'infinitif qui signifie la naissance.$Mon tout: est synonyme de savoir.$Qui suis-je|CONNAITRE
+25|Mon premier: est une salade chez St-Hubert.$Mon deuxième: n'est pas haut.$Mon troisième: est la 8e consonne de l'alphabet.$Mon tout: est très présent dans le jeu à Éric.$Qui suis-je?|CHUBAKA
