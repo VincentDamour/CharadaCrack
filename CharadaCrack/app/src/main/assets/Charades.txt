@@ -1,4 +1,4 @@
-﻿1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
+﻿1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une petire montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
 2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
 3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
 4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
@@ -12,4 +12,4 @@
 11|Mon premier: est un oiseau qui fait la roue. $Mon deuxième: est synonyme de plate. $Mon troisième: n'est pas vrai. $Mon tout est un français qui n'aime pas le fromage et un italien qui n'aime pas les pâtes. $Qui suis-je?|PANDOLFO
 12|Mon premier: est un alcool qui peut être rouge ou blanc. $Mon deuxième: est le résultat d'une coupure. $Mon tout: est un hacker. $Qui suis-je?|VINCENT
 13|Mon premier: est une partie du corps. $Mon deuxième: est une note de musique. $Mon troisième est l'abréviation de Nicolas. $Mon tout est un villageois. $Qui suis-je?|DOMINIC
-14|
+14|Mon premier: n'est pas froid. $Mon deuxième: est un demi coco. $Mon troisième: est synonyme d'ici. $Mon tout est excellent à pâques. $Qui suis-je?|CHOCOLAT
