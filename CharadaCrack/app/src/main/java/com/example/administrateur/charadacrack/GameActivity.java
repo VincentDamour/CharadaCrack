@@ -52,13 +52,6 @@ public class GameActivity extends ActionBarActivity {
 
         int nbcharadesmax = intent.getIntExtra(ChoixNiveau.EXTRA_MESSAGE,0);
 
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-        String text=nbcharadesmax+"";
-        Toast toast = Toast.makeText(context,text, duration);
-        toast.show();
-
-
         try{
             InputStream charades = getAssets().open("Charades.txt");
             InputStreamReader streamReader = new InputStreamReader(charades,"UTF-8");
