@@ -8,3 +8,4 @@
 8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
 9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
 10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
+11|Mon premier: est un oiseau qui fait la roue. $Mon deuxième: est synonyme de plate. $Mon troisième: n'est pas vrai. $Mon tout est un français qui n'aime pas le fromage et un italien qui n'aime pas les pâtes. $Qui suis-je?|PANDOLFO
