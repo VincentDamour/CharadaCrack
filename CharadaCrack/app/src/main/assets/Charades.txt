@@ -22,4 +22,4 @@
 22|Mon premier: est le nom de notre ancienne copine.$Mon deuxième: vient à la fin d'une prière.$Mon tout: en stress plus d'un. $Qui suis-je?|EXAMEN
 23|Mon premier: se trouve de chaque côté de la bouche.$Mon deuxième: est une conjonction.$Mon tout: est adoré par les enfants. $Qui suis-je?|JOUET
 24|Mon premier: est stupide.$Mon deuxième: est un verbe à l'infinitif qui signifie la naissance.$Mon tout: est synonyme de savoir.$Qui suis-je|CONNAITRE
-25|Mon premier: est une salade chez St-Hubert.$Mon deuxième: n'est pas haut.$Mon troisième: est la 8e consonne de l'alphabet.$Mon tout: est très présent dans le jeu à Éric.$Qui suis-je?|CHUBAKA
+25|Mon premier: est une salade chez St-Hubert.$Mon deuxième: n'est pas haut.$Mon troisième: est la 8e consonne de l'alphabet.$Mon tout: est très présent dans le jeu à Éric.$Qui suis-je?|CHEWBACCA
