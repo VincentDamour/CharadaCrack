@@ -17,4 +17,6 @@
 16|Mon premier: est une voiture pour les québécois et un tank pour les français. $Mon deuxième: est le contraire de mauvais. $Mon tout: alimente le barbecue. $Qui suis-je|CHARBON
 17|Mon premier: est un contenant à bean. $Mon deuxième: le cinéma en est le 7e. $Mon tout: est excellent en confit. $Qui suis-je?|CANARD
 18|Mon premier: est un animal populaire sur youtube. $Mon deuxième: est un produit des vaches. $Mon tout: est populaire autour des lacs. $Qui suis-je?|CHALET
-19|Mon premier: Mon premier n'est pas beau. $Mon deuxième: est la case de départ au monopoly. $Mon tout: est un jeu de construction. $Qui suis-je?|LEGO
+19|Mon premier: n'est pas beau. $Mon deuxième: est la case de départ au monopoly. $Mon tout: est un jeu de construction. $Qui suis-je?|LEGO
+20|Mon premier: est une condition. $mon deuxième: est une arme longue avec un pique au bout. $Mon tout: ne fait pas de bruit. $Qui suis-je?|SILENCE
+
