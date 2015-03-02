@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -118,8 +119,6 @@ public class GameActivity extends ActionBarActivity {
 
     public void NextCharades()
     {
-
-
         if(listeCharades.isEmpty())
         {
             PartieFini();
@@ -179,6 +178,8 @@ public class GameActivity extends ActionBarActivity {
         {
             timer.cancel();
             timer.purge();
+            MediaPlayer mediaPlayer= MediaPlayer.create(GameActivity.this, R.raw.success2);
+            mediaPlayer.start();
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder
@@ -351,6 +352,8 @@ public class GameActivity extends ActionBarActivity {
         {
            listeCharades.get(numeroCharadeCourrante).setDejaPasse(true);
            txtview_Temps.setText("2:00");
+           MediaPlayer mediaPlayer= MediaPlayer.create(GameActivity.this, R.raw.fail);
+           mediaPlayer.start();
            NextCharades();
         }
     }
