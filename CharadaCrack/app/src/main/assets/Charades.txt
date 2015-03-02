@@ -21,3 +21,4 @@
 20|Mon premier: est une condition. $mon deuxième: est une arme longue avec un pique au bout. $Mon tout: ne fait pas de bruit. $Qui suis-je?|SILENCE
 
 21|Mon premier: est ce qu'on écrit. $Mon deuxième: est au milieu du visage. $Mon tout: traîne dans le fond des poches. $Qui suis-je?|MONNAIE
+22|Mon premier: est le nom de notre ancienne copine. $Mon deuxième: vient à la fin d'une prière. $Mon tout: en stress plus d'un. $Qui suis-je?|EXAMEN
