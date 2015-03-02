@@ -20,3 +20,4 @@
 19|Mon premier: n'est pas beau. $Mon deuxième: est la case de départ au monopoly. $Mon tout: est un jeu de construction. $Qui suis-je?|LEGO
 20|Mon premier: est une condition. $mon deuxième: est une arme longue avec un pique au bout. $Mon tout: ne fait pas de bruit. $Qui suis-je?|SILENCE
 
+21|Mon premier: est ce qu'on écrit. $Mon deuxième: est au milieu du visage. $Mon tout: traîne dans le fond des poches. $Qui suis-je?|MONNAIE
