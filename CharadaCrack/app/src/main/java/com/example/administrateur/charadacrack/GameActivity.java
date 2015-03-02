@@ -350,15 +350,23 @@ public class GameActivity extends ActionBarActivity {
 
         if(txtview_Temps.getText() == ">>")
         {
-            txtview_Temps.setText("2:00");
-            NextCharades();
+           listeCharades.get(numeroCharadeCourrante).setDejaPasse(true);
+           txtview_Temps.setText("2:00");
+           NextCharades();
         }
     }
 
     private void AjoutPoints()
-    {
-        int pointsTemps = Minutes*500 + Secondes*10;
-        points += 500 + pointsTemps;
+    {   boolean b=listeCharades.get(numeroCharadeCourrante).getSiDejaPasse();
+        if(b==false)
+        {
+            int pointsTemps = Minutes*500 + Secondes*10;
+            points += 500 + pointsTemps;
+        }
+        else
+        {
+            points += 300;
+        }
 
         TextView txtviewPoint = (TextView)findViewById(R.id.textView_points);
         txtviewPoint.setText("Points: "+points);
