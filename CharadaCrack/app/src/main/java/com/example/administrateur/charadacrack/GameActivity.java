@@ -1,5 +1,6 @@
 package com.example.administrateur.charadacrack;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,6 +13,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.TextView;
@@ -37,21 +40,32 @@ public class GameActivity extends ActionBarActivity {
     Timer timer;
     int Minutes=2;
     int Secondes=0;
+    int points = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_game);
+        Intent intent=getIntent();
+
+        int nbcharadesmax = intent.getIntExtra(ChoixNiveau.EXTRA_MESSAGE,0);
+
         try{
             InputStream charades = getAssets().open("Charades.txt");
             InputStreamReader streamReader = new InputStreamReader(charades,"UTF-8");
             BufferedReader bufferedReader = new BufferedReader(streamReader);
             String line;
+            int nbcharades=0;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] tableauCharades = line.split(Pattern.quote("|"));
                 Charade charade = new Charade(tableauCharades[0],tableauCharades[1],tableauCharades[2]);
-                listeCharades.add(charade);
+                if(nbcharades<nbcharadesmax)
+                {
+                    listeCharades.add(charade);
+                    nbcharades++;
+                }
             }
             charades.close();
         }
@@ -104,9 +118,12 @@ public class GameActivity extends ActionBarActivity {
     {
         if(numeroCharadeCourrante < listeCharades.size() - 1)
         {
+            TextView txtview_Temps = (TextView)findViewById(R.id.textView_temps);
             TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
-            textViewReponse.setText("");
 
+            textViewReponse.setText("");
+            txtview_Temps.setText("2:00");
+            listeLettrePresse = new ArrayList<Integer>();
             numeroCharadeCourrante++;
             String[] CharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
             String CharadeText = "";
@@ -128,22 +145,25 @@ public class GameActivity extends ActionBarActivity {
 
     public void ButtonLettreClick(View view){
         int buttonID = view.getId();
-        String valideReponse="";
-        CharSequence essaie="";
-        Button buttonClick = (Button)findViewById(buttonID);
-        CharSequence lettrePresse = buttonClick.getText();
-        listeLettrePresse.add(buttonID);
 
-        TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
-        essaie=textViewReponse.getText();
+        if(!listeLettrePresse.contains(buttonID)) {
+            listeLettrePresse.add(buttonID);
+            String valideReponse = "";
+            CharSequence essaie = "";
+            Button buttonClick = (Button) findViewById(buttonID);
+            CharSequence lettrePresse = buttonClick.getText();
 
-        valideReponse=essaie.toString()+lettrePresse.toString();
+            TextView textViewReponse = (TextView) findViewById(R.id.txtviewReponse);
+            essaie = textViewReponse.getText();
 
-        String reponseCourrante = listeCharades.get(numeroCharadeCourrante).getReponse();
-        textViewReponse.setText(valideReponse);
-        buttonClick.setVisibility(View.INVISIBLE);
+            valideReponse = essaie.toString() + lettrePresse.toString();
 
-        VerifieReponse(valideReponse);
+            String reponseCourrante = listeCharades.get(numeroCharadeCourrante).getReponse();
+            textViewReponse.setText(valideReponse);
+            buttonClick.setVisibility(View.INVISIBLE);
+
+            VerifieReponse(valideReponse);
+        }
     }
 
     private void VerifieReponse(String valideReponse)
@@ -152,12 +172,16 @@ public class GameActivity extends ActionBarActivity {
 
         if(valideReponse.equals(reponseCourrante))
         {
+            timer.cancel();
+            timer.purge();
+
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder
                     .setMessage("Bravo!!! Vous avez trouvé la bonne réponse.")
                     .setIcon(android.R.drawable.alert_dark_frame)
                     .setPositiveButton("Continuer", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            AjoutPoints();
                             NextCharades();
                         }
                     })
@@ -167,13 +191,17 @@ public class GameActivity extends ActionBarActivity {
 
     public void SupprimerReponse(View view)
     {
-        TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
-        textViewReponse.setText("");
+        if(listeLettrePresse.size() > 0) {
+            TextView textViewReponse = (TextView) findViewById(R.id.txtviewReponse);
+            String reponseCourrante = textViewReponse.getText().toString();
+            int lastButtonID = listeLettrePresse.get(listeLettrePresse.size() - 1);
 
-        for(int i=0; i< listeLettrePresse.size(); i++)
-        {
-            int currentButtonID = listeLettrePresse.get(i);
-            Button buttonToShow = (Button)findViewById(currentButtonID);
+            listeLettrePresse.remove(listeLettrePresse.size() - 1);
+
+            reponseCourrante = reponseCourrante.substring(0, reponseCourrante.length() - 1);
+            textViewReponse.setText(reponseCourrante);
+
+            Button buttonToShow = (Button) findViewById(lastButtonID);
             buttonToShow.setVisibility(View.VISIBLE);
         }
     }
@@ -212,7 +240,7 @@ public class GameActivity extends ActionBarActivity {
 
         while(controlCourrant != null)
         {
-            if(controlCourrant instanceof Button && ((Button) controlCourrant).getId() != R.id.btn_delete)
+            if(controlCourrant instanceof Button && ((Button) controlCourrant).getId() != R.id.btn_DeleteLetter)
             {
                 int positionLettre = rand.nextInt(listeLettresPourAfficher.size());
                 char lettre = listeLettresPourAfficher.get(positionLettre);
@@ -289,13 +317,40 @@ public class GameActivity extends ActionBarActivity {
                        }
                        else
                        {
-                           timer.cancel();
-                           timer.purge();
-                           /***/
+                           TempsFini();
                        }
                     }
                 });
             }
-        }, 2000, 100);
+        }, 2000, 1000);
+    }
+
+    private void TempsFini()
+    {
+        timer.cancel();
+        timer.purge();
+
+        TextView txtview_Temps = (TextView)findViewById(R.id.textView_temps);
+        txtview_Temps.setText(">>");
+    }
+
+    public void TempFiniClick(View view)
+    {
+        TextView txtview_Temps = (TextView)findViewById(R.id.textView_temps);
+
+        if(txtview_Temps.getText() == ">>")
+        {
+            txtview_Temps.setText("2:00");
+            NextCharades();
+        }
+    }
+
+    private void AjoutPoints()
+    {
+        int pointsTemps = Minutes*500 + Secondes*10;
+        points += 500 + pointsTemps;
+
+        TextView txtviewPoint = (TextView)findViewById(R.id.textView_points);
+        txtviewPoint.setText("Points: "+points);
     }
 }
