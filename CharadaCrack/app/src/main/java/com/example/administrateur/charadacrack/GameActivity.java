@@ -37,6 +37,8 @@ public class GameActivity extends ActionBarActivity {
     public List<Charade> listeCharades = new ArrayList<Charade>();
     List<Integer> listeLettrePresse = new ArrayList<Integer>();
     public int numeroCharadeCourrante = 0;
+    public int totalniveau;
+    public int niveaucourrant=1;
     Timer timer;
     int Minutes=2;
     int Secondes=0;
@@ -51,7 +53,7 @@ public class GameActivity extends ActionBarActivity {
         Intent intent=getIntent();
 
         int nbcharadesmax = intent.getIntExtra(ChoixNiveau.EXTRA_MESSAGE,0);
-
+        totalniveau=nbcharadesmax;
         try{
             InputStream charades = getAssets().open("Charades.txt");
             InputStreamReader streamReader = new InputStreamReader(charades,"UTF-8");
@@ -116,15 +118,22 @@ public class GameActivity extends ActionBarActivity {
 
     public void NextCharades()
     {
-        if(numeroCharadeCourrante < listeCharades.size() - 1)
+
+
+        if(listeCharades.isEmpty())
         {
+            PartieFini();
+        }
+        else
+        {
+            Random rand = new Random();
+            numeroCharadeCourrante=rand.nextInt(listeCharades.size());
             TextView txtview_Temps = (TextView)findViewById(R.id.textView_temps);
             TextView textViewReponse = (TextView)findViewById(R.id.txtviewReponse);
 
             textViewReponse.setText("");
             txtview_Temps.setText("2:00");
             listeLettrePresse = new ArrayList<Integer>();
-            numeroCharadeCourrante++;
             String[] CharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
             String CharadeText = "";
             for(int i=0; i<CharadeArray.length;i++){
@@ -137,9 +146,6 @@ public class GameActivity extends ActionBarActivity {
             Minutes=2;
             Secondes=0;
             startTimerJeux();
-        }
-        else {
-            PartieFini();
         }
     }
 
@@ -158,7 +164,6 @@ public class GameActivity extends ActionBarActivity {
 
             valideReponse = essaie.toString() + lettrePresse.toString();
 
-            String reponseCourrante = listeCharades.get(numeroCharadeCourrante).getReponse();
             textViewReponse.setText(valideReponse);
             buttonClick.setVisibility(View.INVISIBLE);
 
@@ -182,11 +187,18 @@ public class GameActivity extends ActionBarActivity {
                     .setPositiveButton("Continuer", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             AjoutPoints();
+                            SupprimeCharades();
                             NextCharades();
                         }
                     })
                     .show();
         }
+    }
+
+    public void SupprimeCharades()
+    {
+        listeCharades.remove(numeroCharadeCourrante);
+        niveaucourrant++;
     }
 
     public void SupprimerReponse(View view)
@@ -259,7 +271,7 @@ public class GameActivity extends ActionBarActivity {
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder
-                .setMessage("Félicitation!!! Vous avez terminé le jeu, vous avez trouvé la bonne réponse pour toutes les charades.")
+                .setMessage("Félicitation!!! Vous avez terminé "+totalniveau+" charades avec un total de points de "+points+".")
                 .setIcon(android.R.drawable.alert_dark_frame)
                 .setPositiveButton("Retour à l'accueil", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
@@ -271,17 +283,14 @@ public class GameActivity extends ActionBarActivity {
 
     private void RetourAccueil()
     {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ChoixNiveau.class);
         startActivity(intent);
     }
 
     private void MAJInfoJoueur()
     {
         TextView txtviewNiveau = (TextView)findViewById(R.id.textView_niveau);
-        int niveauCourrant = numeroCharadeCourrante + 1;
-        int nombreNiveau = listeCharades.size();
-
-        txtviewNiveau.setText("Niveau: "+ niveauCourrant + "/" + nombreNiveau);
+        txtviewNiveau.setText("Niveau: "+ niveaucourrant + "/" + totalniveau);
     }
 
     private void startTimerJeux()
@@ -340,15 +349,23 @@ public class GameActivity extends ActionBarActivity {
 
         if(txtview_Temps.getText() == ">>")
         {
-            txtview_Temps.setText("2:00");
-            NextCharades();
+           listeCharades.get(numeroCharadeCourrante).setDejaPasse(true);
+           txtview_Temps.setText("2:00");
+           NextCharades();
         }
     }
 
     private void AjoutPoints()
-    {
-        int pointsTemps = Minutes*500 + Secondes*10;
-        points += 500 + pointsTemps;
+    {   boolean b=listeCharades.get(numeroCharadeCourrante).getSiDejaPasse();
+        if(b==false)
+        {
+            int pointsTemps = Minutes*500 + Secondes*10;
+            points += 500 + pointsTemps;
+        }
+        else
+        {
+            points += 300;
+        }
 
         TextView txtviewPoint = (TextView)findViewById(R.id.textView_points);
         txtviewPoint.setText("Points: "+points);

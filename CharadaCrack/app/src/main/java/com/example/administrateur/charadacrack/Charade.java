@@ -4,6 +4,7 @@ public class Charade {
     private String CharadeID;
     private String CharadeText;
     private String Reponse;
+    private boolean DejaPasse;
 
     public Charade(){}
 
@@ -11,6 +12,7 @@ public class Charade {
         CharadeID = id;
         CharadeText = text;
         Reponse = rep;
+        DejaPasse = false;
     }
 
     public String getId() {
@@ -34,5 +36,7 @@ public class Charade {
         this.Reponse = rep;
     }
 
+    public boolean getSiDejaPasse(){return DejaPasse;}
+    public void setDejaPasse(boolean boolPasse){this.DejaPasse = boolPasse;}
 
 }
