@@ -27,19 +27,19 @@
 26|Mon premier: est l'abréviation de résidence.$Mon deuxième: est un liquide vital.$Mon tout: est une branche de l'informatique $Qui suis-je?|RESEAU
 27|Mon premier: est un métal précieux.$Mon deuxième: est le verbe diner à l'imparfait.$Mon troisième: est un menteur sans men .$Mon tout: peut être exploité par une pomme, une fenêtre ou un pengouin.$Qui suis-je?|ORDINATEUR
 28|Mon premier: est 3.14159265359.$Mon deuxième: est un animal qui vit dans les égouts.$Mon troisième: est une note de musique.$Mon dernier: est le seul nombre premier pair.$Mon tout: est un bâtiment du désert.$Qui suis-je?|PYRAMIDE
-29|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|SOULIER
-30|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|PANTALON
+29|Mon premier: est une personne qui prend trop d'alcool.$Mon deuxième: est synonyme d'attacher. $Mon tout: Habille mes pieds.$Qui suis-je?|SOULIER
+30|Mon premier: est un coup de fusil.$Mon deuxième: est une partie de mon pied $Mon tout: Recouvre mes jambes.$Qui suis-je?|PANTALON
 
-31|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|YVAN
-32|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|SOURIS
-33|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|AUTONOME
-34|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|CHARADE
-35|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|MANTEAU
-36|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|LUNETTE
-37|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|EPICERIE
-38|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|VIANDE
-39|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|QUEBEC
-40|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|BEAUCE
+31|Mon premier: est la 25e lettre de l'alphabet.$Mon deuxième: est le travail d'un vendeur à la troisième personne du singulier.$Mon tout: est doué avec du rhum $Qui suis-je?|YVAN
+32|Mon premier: est synonyme d'une cenne.$Mon deuxième: les chinois en mange beaucoup.$Mon tout: aime le fromage.$Qui suis-je?|SOURIS
+33|Mon premier: est synonyme de voiture.$Mon deuxième: est un autre nom pour nain de jardin sans le g.$Mon tout: se dit d'une personne qui n'a besoin de personne.$Qui suis-je?|AUTONOME
+34|Mon premier: est un félin.$Mon deuxième: est un rongeur.$Mon troisième: est le premier chiffre pair.$Mon tout: est ce jeux.$Qui suis-je?|CHARADE
+35|Mon premier: ne dit pas la vérité.$Mon deuxième: n'est pas tard.$Mon tout: tient au chaud l'hiver.$Qui suis-je?|MANTEAU
+36|Mon premier: est un satellite.$Mon deuxième: est le verbe être à la deuxième personne du pluriel.$Mon tout: repose sur mon nez.$Qui suis-je?|LUNETTE
+37|Mon premier: le maïs est en cette forme.$Mon deuxième: est le symbole du cérium.$Mon troisième: est notre réaction quand quelque chose est drôle.$Mon tout: est un énorme garde-manger.$Qui suis-je?|EPICERIE
+38|Mon premier: n'est pas mort.$Mon deuxième: est 12 mois.$Mon troisième: complète le nom de ce droïde: R?-D?.$Mon tout: peut être bleu ou à point.$Qui suis-je?|VIANDE
+39|Mon premier: est un stationnement pour bateau.$Mon deuxième: est la bouche des oiseau.$Mon tout: a sur son drapeau, un bateau.$Qui suis-je?|QUEBEC
+40|Mon premier: n'est pas laid.$Mon deuxième: efface le dernier nombre sur la calculatrice.$Mon tout: Mon tout est popuaire pour so festival woodstock.$Qui suis-je?|BEAUCE
 
 41|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|AUTOROUTE
 42|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|ROULADE
