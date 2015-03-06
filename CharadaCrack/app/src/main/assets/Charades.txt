@@ -46,8 +46,8 @@
 43|Mon premier: est utilisé pour écrire sur les tableaux.$Mon deuxième: est nous à la troisième personne du singulier.$Mon tout: peut être de plomb ou d'encre.$Qui suis-je?|CRAYON
 44|Mon premier: est la 4e consonne de l'alphabet.$Mon deuxième: n'est pas de dos.$Mon tout: est pratique pour corriger des erreurs sur papier.$Qui suis-je?|EFFACE
 45|Mon premier: est un grand terrain utilisé par les agriculteurs.$Mon deuxième: est le nom du con invité au dîner.$Mon tout: $Qui suis-je?|CHAMPIGNON
-46|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|ROUTEUR
-47|Mon premier:10 $Mon deuxième: QUÊTE$Mon tout: $Qui suis-je?|DISQUETTE
+46|Mon premier: les vélos en ont deux.$Mon deuxième: est le suffixe de profiteur.$Mon tout: fait transiter des paquets d'une interface réseau vers une autre.$Qui suis-je?|ROUTEUR
+47|Mon premier: est 15*8/120+1*9 $Mon deuxième: est le nom donnée à collecte d'argent à l'église.$Mon tout: est la clé usb des vieux ordis.$Qui suis-je?|DISQUETTE
 48|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|FARCE
 49|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|
 50|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|
