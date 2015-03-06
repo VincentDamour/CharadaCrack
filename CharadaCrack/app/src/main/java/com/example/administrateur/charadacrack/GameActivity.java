@@ -53,22 +53,17 @@ public class GameActivity extends ActionBarActivity {
         setContentView(R.layout.activity_game);
         Intent intent=getIntent();
 
-        int nbcharadesmax = intent.getIntExtra(ChoixNiveau.EXTRA_MESSAGE,0);
-        totalniveau=nbcharadesmax;
+        totalniveau = intent.getIntExtra(ChoixNiveau.EXTRA_MESSAGE,0);
+
         try{
             InputStream charades = getAssets().open("Charades.txt");
             InputStreamReader streamReader = new InputStreamReader(charades,"UTF-8");
             BufferedReader bufferedReader = new BufferedReader(streamReader);
             String line;
-            int nbcharades=0;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] tableauCharades = line.split(Pattern.quote("|"));
                 Charade charade = new Charade(tableauCharades[0],tableauCharades[1],tableauCharades[2]);
-                if(nbcharades<nbcharadesmax)
-                {
-                    listeCharades.add(charade);
-                    nbcharades++;
-                }
+                listeCharades.add(charade);
             }
             charades.close();
         }
@@ -104,6 +99,8 @@ public class GameActivity extends ActionBarActivity {
     public void LoadGame(){
         long seed = System.nanoTime();
         Collections.shuffle(listeCharades, new Random(seed));
+
+        listeCharades = listeCharades.subList(0,totalniveau);
 
         String[] firstCharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
         String firstCharadeText = "";
