@@ -70,8 +70,8 @@ public class ChoixNiveau extends ActionBarActivity {
 
     public void onClickStatistique(View view)
     {
-        //Intent intent = new Intent(this, ChoixNiveau.class);
+        Intent intent = new Intent(this, Statistiques.class);
 
-        // startActivity(intent);
+        startActivity(intent);
     }
 }
