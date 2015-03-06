@@ -22,11 +22,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.Timer;
@@ -53,22 +63,17 @@ public class GameActivity extends ActionBarActivity {
         setContentView(R.layout.activity_game);
         Intent intent=getIntent();
 
-        int nbcharadesmax = intent.getIntExtra(ChoixNiveau.EXTRA_MESSAGE,0);
-        totalniveau=nbcharadesmax;
+        totalniveau = intent.getIntExtra(ChoixNiveau.EXTRA_MESSAGE,0);
+
         try{
             InputStream charades = getAssets().open("Charades.txt");
             InputStreamReader streamReader = new InputStreamReader(charades,"UTF-8");
             BufferedReader bufferedReader = new BufferedReader(streamReader);
             String line;
-            int nbcharades=0;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] tableauCharades = line.split(Pattern.quote("|"));
                 Charade charade = new Charade(tableauCharades[0],tableauCharades[1],tableauCharades[2]);
-                if(nbcharades<nbcharadesmax)
-                {
-                    listeCharades.add(charade);
-                    nbcharades++;
-                }
+                listeCharades.add(charade);
             }
             charades.close();
         }
@@ -104,6 +109,8 @@ public class GameActivity extends ActionBarActivity {
     public void LoadGame(){
         long seed = System.nanoTime();
         Collections.shuffle(listeCharades, new Random(seed));
+
+        listeCharades = listeCharades.subList(0,totalniveau);
 
         String[] firstCharadeArray = listeCharades.get(numeroCharadeCourrante).getCharadeText().split(Pattern.quote("$"));
         String firstCharadeText = "";
@@ -276,12 +283,44 @@ public class GameActivity extends ActionBarActivity {
                 .setIcon(android.R.drawable.alert_dark_frame)
                 .setPositiveButton("Retour à l'accueil", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
+                        /*Faire le code pour enregistrer les statistiques ici*/
+                        EcrireStatistiques(totalniveau,points);
                         RetourAccueil();
                     }
                 })
                 .show();
     }
+    private void EcrireStatistiques(int nbniveau,int points)
+    {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        String stats = "";
+        String Tabu1="\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t";
+        String Tabu2="\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t";
+        String Tabu3="\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t";
+        try {
+            InputStream inputStream = openFileInput("Statistiques.txt");
 
+            if ( inputStream != null ) {
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String line="";
+
+            while ( (line = bufferedReader.readLine()) != null ) {
+                stats+=line;
+                stats+="\n";
+            }
+            inputStream.close();
+        }
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("Statistiques.txt", Context.MODE_PRIVATE));
+            outputStreamWriter.write(stats+Tabu1+nbniveau+Tabu2+points+Tabu3+dateFormat.format(date).toString());
+            //"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"Niveau"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"Points"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"Date"
+            outputStreamWriter.close();
+        }
+        catch (IOException e) {
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
+    }
     private void RetourAccueil()
     {
         Intent intent = new Intent(this, ChoixNiveau.class);
