@@ -22,7 +22,7 @@
 22|Mon premier: est le nom de notre ancienne copine.$Mon deuxième: vient à la fin d'une prière.$Mon tout: en stress plus d'un. $Qui suis-je?|EXAMEN
 23|Mon premier: se trouve de chaque côté de la bouche.$Mon deuxième: est une conjonction.$Mon tout: est adoré par les enfants. $Qui suis-je?|JOUET
 24|Mon premier: est stupide.$Mon deuxième: est un verbe à l'infinitif qui signifie la naissance.$Mon tout: est synonyme de savoir.$Qui suis-je|CONNAITRE
-25|Mon premier: est une salade chez St-Hubert.$Mon deuxième: n'est pas haut.$Mon troisième: est la 8e consonne de l'alphabet.$Mon tout: est très présent dans le jeu à Éric.$Qui suis-je?|CHUBAKA
+25|Mon premier: est une salade chez St-Hubert.$Mon deuxième: n'est pas haut.$Mon troisième: est la 8e consonne de l'alphabet.$Mon tout: est très présent dans le jeu à Éric.$Qui suis-je?|CHEWBACCA
 
 26|Mon premier: est l'abréviation de résidence.$Mon deuxième: est un liquide vital.$Mon tout: est une branche de l'informatique $Qui suis-je?|RESEAU
 27|Mon premier: est un métal précieux.$Mon deuxième: est le verbe diner à l'imparfait.$Mon troisième: est un menteur sans men .$Mon tout: peut être exploité par une pomme, une fenêtre ou un pengouin.$Qui suis-je?|ORDINATEUR
@@ -50,4 +50,4 @@
 47|Mon premier: est 15*8/120+1*9 $Mon deuxième: est le nom donnée à collecte d'argent à l'église.$Mon tout: est la clé usb des vieux ordis.$Qui suis-je?|DISQUETTE
 48|Mon premier: est un dessert breton.$Mon deuxième: est le pluriel de celui.$Mon tout: est synonyme de blague.$Qui suis-je?|FARCE
 49|Mon premier: est un pet de la bouche.$Mon deuxième: est le pronom de la deuxième personne du singulier. Mon troisième: est la combinaison des deux lettres ajouté pour avoir le féminin de bel.$Mon tout: est un os situé au niveau du genou.$Qui suis-je?|ROTULE
-50|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|
+50|Mon premier: est la première lettre de l'alphabet.$Mon deuxième: on dort bien dedans.$Mon troisième n'est pas une fille.$Mon dernier n'a pas raison.$Mon tout: est un gros reptile$Qui suis-je?|ALLIGATOR
