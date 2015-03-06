@@ -43,9 +43,9 @@
 
 41|Mon premier: est synonyme de voiture.$Mon deuxième: est utilisé par les voiture.$Mon tout:n'a pas de limite en allemagne.$Qui suis-je?|AUTOROUTE
 42|Mon premier: à les cheveux orange.$Mon deuxième: est une note de musique.$Mon troisième: est 5%3.$Mon tout: est un élément de base en gymnastique qu'on a tous fait étant petit.$Qui suis-je?|ROULADE
-43|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|CRAYON
-44|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|EFFACE
-45|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|CHAMPIGNON
+43|Mon premier: est utilisé pour écrire sur les tableaux.$Mon deuxième: est nous à la troisième personne du singulier.$Mon tout: peut être de plomb ou d'encre.$Qui suis-je?|CRAYON
+44|Mon premier: est la 4e consonne de l'alphabet.$Mon deuxième: n'est pas de dos.$Mon tout: est pratique pour corriger des erreurs sur papier.$Qui suis-je?|EFFACE
+45|Mon premier: est un grand terrain utilisé par les agriculteurs.$Mon deuxième: est le nom du con invité au dîner.$Mon tout: $Qui suis-je?|CHAMPIGNON
 46|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|ROUTEUR
 47|Mon premier:10 $Mon deuxième: QUÊTE$Mon tout: $Qui suis-je?|DISQUETTE
 48|Mon premier: $Mon deuxième: $Mon tout: $Qui suis-je?|FARCE
