@@ -50,11 +50,10 @@
             android:textColor="#ffffffff" />
     </LinearLayout>
 
-    <TextView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/txtView_Stats"
-        android:textColor="#ffffffff"
-        android:textSize="15dp"
-        android:layout_marginTop="2dp" />
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_stats"
+        android:textColor="#ffffffff"/>
+
 </LinearLayout>

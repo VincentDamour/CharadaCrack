@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -24,20 +26,24 @@ public class Statistiques extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_statistique);
-
+        ListView list = (ListView) findViewById(R.id.listView_stats);
         try {
             InputStream inputStream = openFileInput("Statistiques.txt");
 
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String stats = "";
+                //String stats = "";
+                final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                        android.R.layout.simple_list_item_1, android.R.id.text1);
                 String line="";
 
                 while ( (line = bufferedReader.readLine()) != null ) {
-                    stats+=line;
+                    //stats+=line;
+                    adapter.add(line);
                 }
-                ((TextView)findViewById(R.id.txtView_Stats)).setText(stats);
+                list.setAdapter(adapter);
+                //((TextView)findViewById(R.id.txtView_Stats)).setText(stats);
                 inputStream.close();
             }
         }
