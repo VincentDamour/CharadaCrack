@@ -1,17 +1,17 @@
 ﻿1|Mon premier: sert à faire des châteaux de sable.$Mon second: est une petite montagne.$Mon tout: est un délicieux poisson$Qui suis-je?|SAUMON
 2|Mon premier: est un animal bavard$Mon deuxième: est une voyelle$Mon troisième: est le contraire de yes (en anglais)$Mon tout: est un instrument de musique.$Qui suis-je?|PIANO
-3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal.$Qui suis-je?|OURSIN
+3|Mon premier: est un animal féroce qui vit dans la forêt.$Mon deuxième: est une partie du corps des femmes.$Mon tout: est un animal marin.$Qui suis-je?|OURSIN
 4|Mon premier: est une note de musique.$Mon deuxieme: on va le chercher a l'épicerie.$Mon tout: mange des carottes.$Qui suis-je?|LAPIN
 5|Mon premier: est une partie du corps.$Mon deuxième: est l'inverse de méchant.$Mon tout: est un mammifère marin.$Qui suis-je?|DAUPHIN
 6|Mon premier: est un animal qui vit sur les têtes.$Mon second: est le liquide donné par les vaches.$Mon tout: est bon quand il est rôti.$Qui suis-je?|POULET
-7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout il n'existe plus.$Qui suis-je?|SECRET
+7|Mon premier: est un déterminant possessif.$Mon deuxième: est utilisé pour écrire sur un tableau.$Si on dévoile mon tout, il n'existe plus.$Qui suis-je?|SECRET
 8|Mon premier: est un métal précieux.$Mon second: n'est pas rapide.$Mon troisième: est une note de musique.$Mon tout: est une ville des États-Unis.$Qui suis-je?|ORLANDO
 9|Mon premier: est un animal qui ressemble à une grosse souris.$Mon deuxième: est le verbe dire à la première personne du singulier au présent.$Mon tout: est un légume croquant.$Qui suis-je?|RADIS
 10|Mon premier: est une lettre.$Mon deuxième: est aussi une lettre.$Mon tout: vient de naître.$Qui suis-je?|BEBE
-11|Mon premier: est un oiseau qui fait la roue.$Mon deuxième: est synonyme de plate.$Mon troisième: n'est pas vrai.$Mon tout est un français qui n'aime pas le fromage et un italien qui n'aime pas les pâtes.$Qui suis-je?|PANDOLFO
+11|Mon premier: est un oiseau qui fait la roue.$Mon deuxième: est synonyme de plate.$Mon troisième: n'est pas vrai.$Mon tout: est un français qui n'aime pas le fromage et un italien qui n'aime pas les pâtes.$Qui suis-je?|PANDOLFO
 12|Mon premier: est un alcool qui peut être rouge ou blanc.$Mon deuxième: est le résultat d'une coupure.$Mon tout: est un hacker.$Qui suis-je?|VINCENT
 13|Mon premier: est une partie du corps.$Mon deuxième: est une note de musique.$Mon troisième est l'abréviation de Nicolas.$Mon tout est un villageois.$Qui suis-je?|DOMINIC
-14|Mon premier: n'est pas froid.$Mon deuxième: est un demi coco.$Mon troisième: est synonyme d'ici. $Mon tout est excellent à Pâques.$Qui suis-je?|CHOCOLAT
+14|Mon premier: n'est pas froid.$Mon deuxième: est un demi coco.$Mon troisième: est synonyme d'ici. $Mon tout: est excellent à Pâques.$Qui suis-je?|CHOCOLAT
 15|Mon premier: a six faces.$Mon deuxième: est confortable la nuit.$Mon troisième: est ciel au pluriel.$Mon tout: veut dire très bon.$Qui suis-je?|DELICIEUX
 16|Mon premier: est une voiture pour les québécois et un tank pour les français. $Mon deuxième: est le contraire de mauvais. $Mon tout: alimente le barbecue. $Qui suis-je|CHARBON
 17|Mon premier: est un contenant à bean.$Mon deuxième: le cinéma en est le 7e. $Mon tout: est excellent en confit.$Qui suis-je?|CANARD
@@ -24,7 +24,7 @@
 24|Mon premier: est stupide.$Mon deuxième: est un verbe à l'infinitif qui signifie la naissance.$Mon tout: est synonyme de savoir.$Qui suis-je|CONNAITRE
 25|Mon premier: est une salade chez St-Hubert.$Mon deuxième: n'est pas haut.$Mon troisième: est la 8e consonne de l'alphabet.$Mon tout: est très présent dans le jeu à Éric.$Qui suis-je?|CHEWBACCA
 26|Mon premier: est l'abréviation de résidence.$Mon deuxième: est un liquide vital.$Mon tout: est une branche de l'informatique $Qui suis-je?|RESEAU
-27|Mon premier: est un métal précieux.$Mon deuxième: est le verbe diner à l'imparfait.$Mon troisième: est un menteur sans men .$Mon tout: peut être exploité par une pomme, une fenêtre ou un pengouin.$Qui suis-je?|ORDINATEUR
+27|Mon premier: est un métal précieux.$Mon deuxième: est le verbe dîner à l'imparfait.$Mon troisième: est un menteur sans men .$Mon tout: peut être exploité par une pomme, une fenêtre ou un pingouin.$Qui suis-je?|ORDINATEUR
 28|Mon premier: est 3.14159265359.$Mon deuxième: est un animal qui vit dans les égouts.$Mon troisième: est une note de musique.$Mon dernier: est le seul nombre premier pair.$Mon tout: est un bâtiment du désert.$Qui suis-je?|PYRAMIDE
 29|Mon premier: est une personne qui prend trop d'alcool.$Mon deuxième: est synonyme d'attacher. $Mon tout: Habille mes pieds.$Qui suis-je?|SOULIER
 30|Mon premier: est un coup de fusil.$Mon deuxième: est une partie de mon pied $Mon tout: Recouvre mes jambes.$Qui suis-je?|PANTALON
@@ -37,14 +37,14 @@
 37|Mon premier: le maïs est en cette forme.$Mon deuxième: est le symbole du cérium.$Mon troisième: est notre réaction quand quelque chose est drôle.$Mon tout: est un énorme garde-manger.$Qui suis-je?|EPICERIE
 38|Mon premier: n'est pas mort.$Mon deuxième: est 12 mois.$Mon troisième: complète le nom de ce droïde: R?-D?.$Mon tout: peut être bleu ou à point.$Qui suis-je?|VIANDE
 39|Mon premier: est un stationnement pour bateau.$Mon deuxième: est la bouche des oiseau.$Mon tout: a sur son drapeau, un bateau.$Qui suis-je?|QUEBEC
-40|Mon premier: n'est pas laid.$Mon deuxième: efface le dernier nombre sur la calculatrice.$Mon tout: Mon tout est popuaire pour so festival woodstock.$Qui suis-je?|BEAUCE
-41|Mon premier: est synonyme de voiture.$Mon deuxième: est utilisé par les voiture.$Mon tout:n'a pas de limite en allemagne.$Qui suis-je?|AUTOROUTE
-42|Mon premier: à les cheveux orange.$Mon deuxième: est une note de musique.$Mon troisième: est 5%3.$Mon tout: est un élément de base en gymnastique qu'on a tous fait étant petit.$Qui suis-je?|ROULADE
+40|Mon premier: n'est pas laid.$Mon deuxième: efface le dernier nombre sur la calculatrice.$Mon tout: est populaire pour son festival woodstock.$Qui suis-je?|BEAUCE
+41|Mon premier: est synonyme de voiture.$Mon deuxième: est utilisé par les voitures.$Mon tout:n'a pas de limite en Allemagne.$Qui suis-je?|AUTOROUTE
+42|Mon premier: a les cheveux orange.$Mon deuxième: est une note de musique.$Mon troisième: est 5%3.$Mon tout: est un élément de base en gymnastique qu'on a tous fait étant petit.$Qui suis-je?|ROULADE
 43|Mon premier: est utilisé pour écrire sur les tableaux.$Mon deuxième: est nous à la troisième personne du singulier.$Mon tout: peut être de plomb ou d'encre.$Qui suis-je?|CRAYON
 44|Mon premier: est la 4e consonne de l'alphabet.$Mon deuxième: n'est pas de dos.$Mon tout: est pratique pour corriger des erreurs sur papier.$Qui suis-je?|EFFACE
 45|Mon premier: est un grand terrain utilisé par les agriculteurs.$Mon deuxième: est le nom du con invité au dîner.$Mon tout: est une moisissure commestible$Qui suis-je?|CHAMPIGNON
 46|Mon premier: les vélos en ont deux.$Mon deuxième: est le suffixe de profiteur.$Mon tout: fait transiter des paquets d'une interface réseau vers une autre.$Qui suis-je?|ROUTEUR
 47|Mon premier: est 15*8/120+1*9 $Mon deuxième: est le nom donnée à collecte d'argent à l'église.$Mon tout: est la clé usb des vieux ordis.$Qui suis-je?|DISQUETTE
 48|Mon premier: est un dessert breton.$Mon deuxième: est le pluriel de celui.$Mon tout: est synonyme de blague.$Qui suis-je?|FARCE
-49|Mon premier: est un pet de la bouche.$Mon deuxième: est le pronom de la deuxième personne du singulier. Mon troisième: est la combinaison des deux lettres ajouté pour avoir le féminin de bel.$Mon tout: est un os situé au niveau du genou.$Qui suis-je?|ROTULE
-50|Mon premier: est la première lettre de l'alphabet.$Mon deuxième: on dort bien dedans.$Mon troisième n'est pas une fille.$Mon dernier n'a pas raison.$Mon tout: est un gros reptile$Qui suis-je?|ALLIGATOR
+49|Mon premier: est un pet de la bouche.$Mon deuxième: est le pronom de la deuxième personne du singulier.$Mon troisième: est la combinaison des deux lettres ajouté pour avoir le féminin de bel.$Mon tout: est un os situé au niveau du genou.$Qui suis-je?|ROTULE
+50|Mon premier: est la première lettre de l'alphabet.$Mon deuxième: on dort bien dedans.$Mon troisième: n'est pas une fille.$Mon dernier: n'a pas raison.$Mon tout: est un gros reptile$Qui suis-je?|ALLIGATOR
