@@ -15,11 +15,46 @@
         android:textSize="50dp"
         android:layout_marginTop="30dp"/>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Niveaux"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"
+            android:id="@+id/txtview_Niveau"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scores"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/txtview_scores"
+            android:textSize="30dp"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_marginLeft="30dp"
+            android:gravity="right"
+            android:id="@+id/txtview_date"
+            android:textSize="30dp"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/txtView_Stats"
         android:textColor="#ffffffff"
         android:textSize="15dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="2dp" />
 </LinearLayout>
