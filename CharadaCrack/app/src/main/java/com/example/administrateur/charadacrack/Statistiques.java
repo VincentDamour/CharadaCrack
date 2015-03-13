@@ -27,6 +27,10 @@ public class Statistiques extends ActionBarActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_statistique);
         ListView list = (ListView) findViewById(R.id.listView_stats);
+        ListView listtitre = (ListView) findViewById(R.id.listView_titre);
+        String Tabu1="\t"+"\t"+"\t"+"\t"+"\t"+"\t";
+        String Tabu2="\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t";
+        String Tabu3="\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t";
         try {
             InputStream inputStream = openFileInput("Statistiques.txt");
 
@@ -36,6 +40,10 @@ public class Statistiques extends ActionBarActivity {
                 //String stats = "";
                 final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                         android.R.layout.simple_list_item_1, android.R.id.text1);
+                final String[] values = new String[] { Tabu1+"Niveaux"+Tabu2+"Scores"+Tabu3+"Date"};
+                final ArrayAdapter<String> titre = new ArrayAdapter<String>(this,
+                        android.R.layout.simple_list_item_1, android.R.id.text1,values);
+
                 String line="";
 
                 while ( (line = bufferedReader.readLine()) != null ) {
@@ -43,6 +51,8 @@ public class Statistiques extends ActionBarActivity {
                     adapter.add(line);
                 }
                 list.setAdapter(adapter);
+                listtitre.setAdapter(titre);
+
                 //((TextView)findViewById(R.id.txtView_Stats)).setText(stats);
                 inputStream.close();
             }
