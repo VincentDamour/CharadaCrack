@@ -36,7 +36,6 @@ public class Statistiques extends ActionBarActivity {
 
                 while ( (line = bufferedReader.readLine()) != null ) {
                     stats+=line;
-                    stats+="\n";
                 }
                 ((TextView)findViewById(R.id.txtView_Stats)).setText(stats);
                 inputStream.close();
