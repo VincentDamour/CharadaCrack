@@ -294,24 +294,66 @@ public class GameActivity extends ActionBarActivity {
     {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
+        /***/
+        Context lecontext = getBaseContext();
+        FileOutputStream fOut = null;
+        OutputStreamWriter osw = null;
+        /***/
         String stats = "";
         String Tabu1="\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t";
         String Tabu2="\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t";
         String Tabu3="\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t";
+
+        try
+        {
+            InputStream inputStream = openFileInput("Statistiques.txt");
+
+            if ( inputStream != null ) {
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String line="";
+
+                while ( (line = bufferedReader.readLine()) != null ) {
+                    stats+=line;
+                    stats+="\n";
+                }
+                inputStream.close();
+            }
+            fOut = lecontext.openFileOutput("Statistiques.txt", MODE_APPEND);
+            osw = new OutputStreamWriter(fOut);
+            osw.write(stats+Tabu1+nbniveau+Tabu2+points+Tabu3+dateFormat.format(date).toString());
+            osw.flush();
+        }
+        catch (Exception e)
+        {
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
+        finally
+        {
+            try
+            {
+                osw.close();
+                fOut.close();
+            } catch (IOException e)
+            {
+                Log.e("Exception", "File write failed: " + e.toString());
+            }
+        }
+        /*
         try {
             InputStream inputStream = openFileInput("Statistiques.txt");
 
             if ( inputStream != null ) {
-            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-            String line="";
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String line="";
 
-            while ( (line = bufferedReader.readLine()) != null ) {
-                stats+=line;
-                stats+="\n";
+                while ( (line = bufferedReader.readLine()) != null ) {
+                    stats+=line;
+                    stats+="\n";
+                }
+                inputStream.close();
             }
-            inputStream.close();
-        }
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("Statistiques.txt", Context.MODE_PRIVATE));
             outputStreamWriter.write(stats+Tabu1+nbniveau+Tabu2+points+Tabu3+dateFormat.format(date).toString());
             //"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"Niveau"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"Points"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"Date"
@@ -319,7 +361,7 @@ public class GameActivity extends ActionBarActivity {
         }
         catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
-        }
+        }*/
     }
     private void RetourAccueil()
     {
