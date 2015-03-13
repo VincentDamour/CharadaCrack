@@ -306,7 +306,7 @@ public class GameActivity extends ActionBarActivity {
 
         try
         {
-            InputStream inputStream = openFileInput("Statistiques.txt");
+            /*InputStream inputStream = openFileInput("Statistiques.txt");
 
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -318,7 +318,7 @@ public class GameActivity extends ActionBarActivity {
                     stats+="\n";
                 }
                 inputStream.close();
-            }
+            }*/
             fOut = lecontext.openFileOutput("Statistiques.txt", MODE_APPEND);
             osw = new OutputStreamWriter(fOut);
             osw.write(Tabu1+nbniveau+Tabu2+points+Tabu3+dateFormat.format(date).toString());
