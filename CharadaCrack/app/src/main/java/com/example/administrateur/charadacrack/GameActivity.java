@@ -321,7 +321,7 @@ public class GameActivity extends ActionBarActivity {
             }
             fOut = lecontext.openFileOutput("Statistiques.txt", MODE_APPEND);
             osw = new OutputStreamWriter(fOut);
-            osw.write(stats+Tabu1+nbniveau+Tabu2+points+Tabu3+dateFormat.format(date).toString());
+            osw.write(Tabu1+nbniveau+Tabu2+points+Tabu3+dateFormat.format(date).toString());
             osw.flush();
         }
         catch (Exception e)
