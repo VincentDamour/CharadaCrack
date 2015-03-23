@@ -14,12 +14,13 @@
         android:textColor="#ffffffff"
         android:textSize="50dp"
         android:layout_marginTop="30dp"/>
-
-    <TextView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/txtView_Stats"
-        android:textColor="#ffffffff"
-        android:textSize="15dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_height="58dp"
+        android:id="@+id/listView_titre" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_stats"
+        android:textColor="#ffffffff"/>
 </LinearLayout>
